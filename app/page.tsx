@@ -7,6 +7,7 @@ import { seed, partnerReferences } from '../data/seed';
 
 const labels: Record<string, string> = {
   flights: 'Flights',
+  tabel: 'Tabel Harian',
   la: 'LA',
   hotels: 'Hotels',
   transport: 'Transport',
@@ -28,11 +29,22 @@ export default function Page() {
   const [pax, setPax] = useState(2);
   const [occupancy, setOccupancy] = useState('Quad');
   const [tab, setTab] = useState('flights');
-  const [simDate, setSimDate] = useState(new Date().toISOString().slice(0, 10));
+  const [simDate, setSimDate] = useState('2027-01-05');
 
   const base = useMemo(() => Object.values(seed).flat().reduce((a, b) => a + b.price, 0), []);
   const total = base * pax * (duration / 9) * (occupancy === 'Double' ? 1.25 : occupancy === 'Triple' ? 1.1 : 1);
   const margin = total * 0.3;
+
+  // Filter + sort flights for the daily table
+  const dailyFlights = useMemo(() => {
+    if (tab !== 'tabel') return [];
+    return seed.flights
+      .filter((f) => {
+        const originCode = origin.split(' ')[0];
+        return f.detail.startsWith(originCode);
+      })
+      .sort((a, b) => a.price - b.price);
+  }, [tab, origin]);
 
   return (
     <main>
@@ -74,7 +86,13 @@ export default function Page() {
         </div>
         <div className="control">
           <label>Tanggal berangkat</label>
-          <input type="date" defaultValue="2027-01-15" />
+          <input
+            type="date"
+            value={simDate}
+            min="2027-01-01"
+            max="2027-01-31"
+            onChange={(e) => setSimDate(e.target.value)}
+          />
         </div>
         <div className="control">
           <label>Durasi</label>
@@ -142,6 +160,54 @@ export default function Page() {
                   </div>
                 </article>
               ))
+            ) : tab === 'tabel' ? (
+              dailyFlights.length === 0 ? (
+                <p className="fine">Tidak ada data untuk {simDate} dari asal {origin.split(' ')[0]}.</p>
+              ) : (
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
+                  <thead>
+                    <tr style={{ borderBottom: '2px solid var(--border)' }}>
+                      <th style={{ textAlign: 'left', padding: '0.5rem' }}>Airline</th>
+                      <th style={{ textAlign: 'left', padding: '0.5rem' }}>Rute</th>
+                      <th style={{ textAlign: 'left', padding: '0.5rem' }}>Durasi</th>
+                      <th style={{ textAlign: 'right', padding: '0.5rem' }}>Harga (IDR)</th>
+                      <th style={{ textAlign: 'center', padding: '0.5rem' }}>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dailyFlights.map((f, i) => {
+                      const parts = f.detail.split(' · ');
+                      const route = parts[0] || f.detail;
+                      const trip = parts[1] || '';
+                      return (
+                        <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
+                          <td style={{ padding: '0.5rem' }}>
+                            <b>{f.name}</b>
+                          </td>
+                          <td style={{ padding: '0.5rem', color: 'var(--muted-foreground)' }}>{route}</td>
+                          <td style={{ padding: '0.5rem', color: 'var(--muted-foreground)' }}>{trip}</td>
+                          <td style={{ padding: '0.5rem', textAlign: 'right', fontWeight: 600 }}>
+                            {rupiah(f.price)}
+                          </td>
+                          <td style={{ padding: '0.5rem', textAlign: 'center' }}>
+                            <span
+                              style={{
+                                fontSize: '0.75rem',
+                                padding: '0.15rem 0.4rem',
+                                borderRadius: '4px',
+                                background: f.status === 'live' ? '#d1fae5' : '#fef3c7',
+                                color: f.status === 'live' ? '#065f46' : '#92400e',
+                              }}
+                            >
+                              {f.status === 'live' ? 'Live' : 'Indikatif'}
+                            </span>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              )
             ) : (
               seed[tab].map((item, i) => (
                 <article className="item" key={i}>
