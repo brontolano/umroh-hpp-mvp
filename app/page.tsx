@@ -2,6 +2,12 @@
 
 import { useMemo, useState } from 'react';
 import { WorkspaceCheckView } from '../components/WorkspaceCheckView';
+import TabNav from '../components/TabNav';
+import ControlBar from '../components/ControlBar';
+import ItemCard from '../components/ItemCard';
+import PartnerCard from '../components/PartnerCard';
+import DailyTable from '../components/DailyTable';
+import SummaryCard from '../components/SummaryCard';
 
 import { seed, partnerReferences } from '../data/seed';
 
@@ -16,13 +22,6 @@ const labels: Record<string, string> = {
   partner: 'Partner',
 };
 
-const rupiah = (n: number) =>
-  new Intl.NumberFormat('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    maximumFractionDigits: 0,
-  }).format(n);
-
 export default function Page() {
   const [origin, setOrigin] = useState('CGK');
   const [duration, setDuration] = useState(9);
@@ -35,16 +34,14 @@ export default function Page() {
   const total = base * pax * (duration / 9) * (occupancy === 'Double' ? 1.25 : occupancy === 'Triple' ? 1.1 : 1);
   const margin = total * 0.3;
 
-  // Filter + sort flights for the daily table
-  const dailyFlights = useMemo(() => {
-    if (tab !== 'tabel') return [];
-    return seed.flights
-      .filter((f) => {
-        const originCode = origin.split(' ')[0];
-        return f.detail.startsWith(originCode);
-      })
-      .sort((a, b) => a.price - b.price);
-  }, [tab, origin]);
+  const icons: Record<string, string> = {
+    flights: '✈',
+    hotels: '⌂',
+    visa: '▣',
+    la: '✦',
+    transport: '✦',
+    program: '✦',
+  };
 
   return (
     <main>
@@ -64,8 +61,8 @@ export default function Page() {
           <p className="eyebrow">OPERASIONAL / HPP CALCULATOR</p>
           <h1>Rancang paket Umrah<br /><em>dengan angka yang jelas.</em></h1>
           <p className="intro">
-            Kalkulator internal untuk menyusun estimasi biaya per pax. Semua angka di bawah adalah referensi indikatif
-            dan perlu divalidasi sebelum penawaran.
+            Kalkulator internal untuk menyusun estimasi biaya per pax. Semua angka di bawah adalah referensi
+            indikatif dan perlu divalidasi sebelum penawaran.
           </p>
         </div>
         <div className="hero-note">
@@ -74,51 +71,13 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="card controls">
-        <div className="control">
-          <label>Asal keberangkatan</label>
-          <select value={origin} onChange={(e) => setOrigin(e.target.value)}>
-            <option>CGK — Jakarta</option>
-            <option>SUB — Surabaya</option>
-            <option>KNO — Medan</option>
-            <option>UPG — Makassar</option>
-          </select>
-        </div>
-        <div className="control">
-          <label>Tanggal berangkat</label>
-          <input
-            type="date"
-            value={simDate}
-            min="2027-01-01"
-            max="2027-01-31"
-            onChange={(e) => setSimDate(e.target.value)}
-          />
-        </div>
-        <div className="control">
-          <label>Durasi</label>
-          <div className="step">
-            <button onClick={() => setDuration(Math.max(1, duration - 1))}>−</button>
-            <b>{duration} hari</b>
-            <button onClick={() => setDuration(duration + 1)}>+</button>
-          </div>
-        </div>
-        <div className="control">
-          <label>Jumlah pax</label>
-          <div className="step">
-            <button onClick={() => setPax(Math.max(1, pax - 1))}>−</button>
-            <b>{pax} pax</b>
-            <button onClick={() => setPax(pax + 1)}>+</button>
-          </div>
-        </div>
-        <div className="control">
-          <label>Kamar</label>
-          <select value={occupancy} onChange={(e) => setOccupancy(e.target.value)}>
-            <option>Quad</option>
-            <option>Triple</option>
-            <option>Double</option>
-          </select>
-        </div>
-      </section>
+      <ControlBar
+        origin={origin} setOrigin={setOrigin}
+        duration={duration} setDuration={setDuration}
+        pax={pax} setPax={setPax}
+        occupancy={occupancy} setOccupancy={setOccupancy}
+        simDate={simDate} setSimDate={setSimDate}
+      />
 
       <div className="grid">
         <section className="card breakdown">
@@ -129,138 +88,31 @@ export default function Page() {
             </div>
             <span className="pill">{origin.split(' ')[0]} · {duration} hari</span>
           </div>
-          <nav>
-            {Object.keys(labels).map((k) => (
-              <button className={tab === k ? 'active' : ''} onClick={() => setTab(k)} key={k}>
-                {labels[k]}
-              </button>
-            ))}
-          </nav>
+
+          <TabNav labels={labels} activeTab={tab} onTabChange={setTab} />
 
           <div className="items">
             {tab === 'partner' ? (
-              partnerReferences.map((p) => (
-                <article className="item" key={p.id}>
-                  <div className="item-icon">🔗</div>
-                  <div className="item-main">
-                    <b>{p.name}</b>
-                    <small>{p.detail}</small>
-                    <small>Status: {p.status}</small>
-                    <small>Trust: {p.trust}</small>
-                    <p className="fine">{p.caveat}</p>
-                    <p className="fine">
-                      Harga internal = harga katalog mitra + {p.partnerAddOn} USD/riyals.<br />
-                      Sumber: {p.source}<br />
-                      Dibuat: {p.created}
-                    </p>
-                  </div>
-                  <div className="item-price">
-                    <b>{p.partnerAddOn} USD/riyals</b>
-                    <small>{p.trust}</small>
-                  </div>
-                </article>
-              ))
+              partnerReferences.map((p) => <PartnerCard key={p.id} p={p} />)
             ) : tab === 'tabel' ? (
-              dailyFlights.length === 0 ? (
-                <p className="fine">Tidak ada data untuk {simDate} dari asal {origin.split(' ')[0]}.</p>
-              ) : (
-                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
-                  <thead>
-                    <tr style={{ borderBottom: '2px solid var(--border)' }}>
-                      <th style={{ textAlign: 'left', padding: '0.5rem' }}>Airline</th>
-                      <th style={{ textAlign: 'left', padding: '0.5rem' }}>Rute</th>
-                      <th style={{ textAlign: 'left', padding: '0.5rem' }}>Durasi</th>
-                      <th style={{ textAlign: 'right', padding: '0.5rem' }}>Harga (IDR)</th>
-                      <th style={{ textAlign: 'center', padding: '0.5rem' }}>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dailyFlights.map((f, i) => {
-                      const parts = f.detail.split(' · ');
-                      const route = parts[0] || f.detail;
-                      const trip = parts[1] || '';
-                      return (
-                        <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
-                          <td style={{ padding: '0.5rem' }}>
-                            <b>{f.name}</b>
-                          </td>
-                          <td style={{ padding: '0.5rem', color: 'var(--muted-foreground)' }}>{route}</td>
-                          <td style={{ padding: '0.5rem', color: 'var(--muted-foreground)' }}>{trip}</td>
-                          <td style={{ padding: '0.5rem', textAlign: 'right', fontWeight: 600 }}>
-                            {rupiah(f.price)}
-                          </td>
-                          <td style={{ padding: '0.5rem', textAlign: 'center' }}>
-                            <span
-                              style={{
-                                fontSize: '0.75rem',
-                                padding: '0.15rem 0.4rem',
-                                borderRadius: '4px',
-                                background: f.status === 'live' ? '#d1fae5' : '#fef3c7',
-                                color: f.status === 'live' ? '#065f46' : '#92400e',
-                              }}
-                            >
-                              {f.status === 'live' ? 'Live' : 'Indikatif'}
-                            </span>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              )
+              <DailyTable
+                flights={seed.flights}
+                simDate={simDate}
+                origin={origin}
+              />
             ) : (
               seed[tab].map((item, i) => (
-                <article className="item" key={i}>
-                  <div className="item-icon">
-                    {tab === 'flights' ? '✈' : tab === 'hotels' ? '⌂' : tab === 'visa' ? '▣' : '✦'}
-                  </div>
-                  <div className="item-main">
-                    <b>{item.name}</b>
-                    <small>{item.detail}</small>
-                    <a href={item.source} target="_blank" rel="noopener noreferrer">
-                      Sumber ↗
-                    </a>
-                  </div>
-                  <div className="item-price">
-                    <b>{rupiah(item.price)}</b>
-                    <small>{item.trust}</small>
-                  </div>
-                </article>
+                <ItemCard key={i} item={item} icon={icons[tab] ?? '✦'} />
               ))
             )}
           </div>
 
-          <p className="fine">ⓘ Seed lokal untuk demo. Harga bukan data live; URL hanya metadata rujukan.</p>
+          <p className="fine">
+            ⓘ Seed lokal untuk demo. Harga bukan data live; URL hanya metadata rujukan.
+          </p>
         </section>
 
-        <aside className="card summary">
-          <p className="eyebrow">RINGKASAN ESTIMASI</p>
-          <h2>HPP per pax</h2>
-          <div className="big-number">{rupiah(total / pax)}</div>
-          <div className="sum-row">
-            <span>Total HPP · {pax} pax</span>
-            <b>{rupiah(total)}</b>
-          </div>
-          <div className="sum-row">
-            <span>Margin rekomendasi · 30%</span>
-            <b>{rupiah(margin)}</b>
-          </div>
-          <div className="quote">
-            <span>Harga jual indikatif</span>
-            <strong>{rupiah((total + margin) / pax)} <small>/ pax</small></strong>
-          </div>
-          <div className="tolerance">
-            <div>
-              <b>Estimate tolerance</b>
-              <span>Target validasi ±5%</span>
-            </div>
-            <strong>Belum divalidasi</strong>
-          </div>
-          <button className="primary">Simpan simulasi <span>→</span></button>
-          <p className="summary-note">
-            Validasi ulang ke vendor sebelum digunakan sebagai harga jual. Tidak ada klaim ketersediaan atau harga live.
-          </p>
-        </aside>
+        <SummaryCard total={total} margin={margin} pax={pax} />
       </div>
 
       <footer>
