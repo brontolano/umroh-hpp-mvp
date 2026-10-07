@@ -8,19 +8,24 @@ import ItemCard from '../components/ItemCard';
 import PartnerCard from '../components/PartnerCard';
 import DailyTable from '../components/DailyTable';
 import SummaryCard from '../components/SummaryCard';
+import HotelCatalog from '../components/HotelCatalog';
+import LivePartnerView from '../components/LivePartnerView';
 
 import { seed, partnerReferences } from '../data/seed';
 import { getLiveFlightsByOrigin } from '../data/live';
+import {
+  liveHotels, liveTransport, liveVisa, liveServices, livePartnerContacts,
+} from '../data/liveHotels';
 
 const labels: Record<string, string> = {
   flights: 'Flights',
   tabel: 'Tabel Harian',
+  hotels: 'Hotels (Live)',
+  transport: 'Transport (Live)',
+  visa: 'Visa (Live)',
   la: 'LA',
-  hotels: 'Hotels',
-  transport: 'Transport',
-  visa: 'Visa',
   program: 'Program',
-  partner: 'Partner',
+  partner: 'Partner (Live)',
 };
 
 export default function Page() {
@@ -71,6 +76,12 @@ export default function Page() {
     program: '✦',
   };
 
+  const occ = (['Double', 'Triple', 'Quad', 'Quint'].includes(occupancy)
+    ? occupancy
+    : 'Quad') as 'Double' | 'Triple' | 'Quad' | 'Quint';
+
+  const isPartnerLiveTab = tab === 'partner' || tab === 'transport' || tab === 'visa';
+
   return (
     <main>
       <header>
@@ -81,7 +92,7 @@ export default function Page() {
             <small>HPP reference desk</small>
           </div>
         </div>
-        <div className="status"><i /> Data lokal · demo</div>
+        <div className="status"><i /> Data lokal + Live PDF · Al Khaif</div>
       </header>
 
       <section className="hero">
@@ -90,7 +101,8 @@ export default function Page() {
           <h1>Rancang paket Umrah<br /><em>dengan angka yang jelas.</em></h1>
           <p className="intro">
             Kalkulator internal untuk menyusun estimasi biaya per pax. Semua angka di bawah adalah referensi
-            indikatif dan perlu divalidasi sebelum penawaran.
+            indikatif dan perlu divalidasi sebelum penawaran. Data hotel, transportasi, dan visa sekarang
+            disinkronkan dari katalog PDF mitra Al Khaif Group (Update 03 Agustus 2026).
           </p>
         </div>
         <div className="hero-note">
@@ -121,13 +133,42 @@ export default function Page() {
 
           <div className="items">
             {tab === 'partner' ? (
-              partnerReferences.map((p) => <PartnerCard key={p.id} p={p} />)
+              <>
+                <LivePartnerView
+                  transport={liveTransport}
+                  visa={liveVisa}
+                  services={liveServices}
+                  contacts={livePartnerContacts}
+                />
+                <hr />
+                {partnerReferences.map((p) => <PartnerCard key={p.id} p={p} />)}
+              </>
             ) : tab === 'tabel' ? (
               <DailyTable
                 flights={seed.flights}
                 liveFlights={liveFlights}
                 simDate={simDate}
                 origin={origin}
+              />
+            ) : tab === 'hotels' ? (
+              <HotelCatalog
+                hotels={liveHotels}
+                simDate={simDate}
+                occupancy={occ}
+              />
+            ) : tab === 'transport' ? (
+              <LivePartnerView
+                transport={liveTransport}
+                visa={liveVisa}
+                services={liveServices}
+                contacts={livePartnerContacts}
+              />
+            ) : tab === 'visa' ? (
+              <LivePartnerView
+                transport={liveTransport}
+                visa={liveVisa}
+                services={liveServices}
+                contacts={livePartnerContacts}
               />
             ) : (
               seed[tab].map((item, i) => (
@@ -140,6 +181,17 @@ export default function Page() {
             ⓘ {liveFlightBase !== null
               ? 'Harga flights dari data LIVE umroh.com — konfirmasi ke vendor.'
               : 'Seed lokal untuk demo. Harga bukan data live; URL hanya metadata rujukan.'}
+            {tab === 'hotels' && (
+              <>
+                <br />Data hotel: katalog Al Khaif Group (PDF) — parser <code>scripts/parse-pdf.py</code>.
+                Update 03 Agustus 2026. Kurs 1 SAR = 4.300 IDR.
+              </>
+            )}
+            {isPartnerLiveTab && (
+              <>
+                <br />Data partner: katalog Al Khaif Group (PDF) — di-OCR via vision API, regenerasi via <code>scripts/parse-pdf.py</code>.
+              </>
+            )}
           </p>
         </section>
 
@@ -147,8 +199,8 @@ export default function Page() {
       </div>
 
       <footer>
-        <span>UMROH.INTERNAL · v0.1 MVP</span>
-        <span>Data seed lokal · Untuk penggunaan internal</span>
+        <span>UMROH.INTERNAL · v0.2 MVP + live PDF</span>
+        <span>Live data: umroh.com (flights, LA) + Al Khaif PDF (hotels, transport, visa)</span>
       </footer>
     </main>
   );

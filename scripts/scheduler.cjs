@@ -3,15 +3,17 @@
  *
  * Node-cron based scraper scheduler for Umroh HPP MVP.
  * Fetches via Moli CDP CLI, parses raw HTML → structured JSON.
+ * Also re-parses the Al Khaif catalog PDF for live hotels/transport/visa.
  *
  * Usage:
- *   node scripts/scheduler.cjs fetch   # fetch + parse (manual / cron)
- *   node scripts/scheduler.cjs parse   # parse raw/*.md → live/flights.json
- *   node scripts/scheduler.cjs cron    # start cron scheduler (keeps process alive)
+ *   node scripts/scheduler.cjs fetch   # fetch + parse all (manual / cron)
+ *   node scripts/scheduler.cjs parse   # parse raw/*.md → live/flights.json + PDF → live/hotels.json
+ *   node scripts/scheduler.cjs cron    # start cron scheduler (every 15 minutes)
  *   node scripts/scheduler.cjs test    # dry-run: show what would be fetched
  *
- * Cron tab (runs daily at 06:00 WIB / 23:00 UTC):
- *   0 23 * * * /usr/bin/node /opt/data/home/workspace/umhaj/umrohbybilal/umroh-hpp-mvp/scripts/scheduler.cjs fetch
+ * Cron tab (every 15 minutes):
+ *   # m h dom mon dow  command
+ *   STAR_SLASH_15 STAR STAR STAR STAR  /usr/bin/node .../scripts/scheduler.cjs fetch
  */
 
 const { spawn, execSync } = require('child_process');
@@ -25,6 +27,8 @@ const PROJECT_ROOT = path.join(__dirname, '..');
 const RAW_DIR = path.join(PROJECT_ROOT, 'data/raw');
 const LIVE_DIR = path.join(PROJECT_ROOT, 'data/live');
 const PARSE_SCRIPT = path.join(PROJECT_ROOT, 'scripts/parse-flights.cjs');
+const PDF_PARSE_SCRIPT = path.join(PROJECT_ROOT, 'scripts/parse-pdf.py');
+const PDF_VENV = process.env.PDF_VENV || '/tmp/pdf_venv/bin/python';
 
 const MOLI_PORT = 9222;
 const MOLI_HOST = '127.0.0.1';
@@ -150,13 +154,18 @@ async function fetchPage(origin, date) {
 // ── Parse ────────────────────────────────────────────────────────────────────
 
 function runParse() {
-  console.log('[Parse] Running parser...');
+  console.log('[Parse] Running flight parser...');
   try {
     execSync(`node "${PARSE_SCRIPT}"`, { cwd: PROJECT_ROOT, stdio: 'inherit' });
-    return true;
   } catch (err) {
-    console.error('[Parse] Failed:', err.message);
-    return false;
+    console.error('[Parse] Flight parser failed:', err.message);
+  }
+
+  console.log('[Parse] Running PDF (Al Khaif catalog) parser...');
+  try {
+    execSync(`"${PDF_VENV}" "${PDF_PARSE_SCRIPT}"`, { cwd: PROJECT_ROOT, stdio: 'inherit' });
+  } catch (err) {
+    console.error('[Parse] PDF parser failed:', err.message);
   }
 }
 
@@ -187,20 +196,21 @@ async function startCron() {
     return false;
   }
 
-  // Daily at 06:00 WIB = 23:00 UTC
-  const schedule = '0 23 * * *';
+  // Every 15 minutes
+  const schedule = '*/15 * * * *';
   if (!cron.validate(schedule)) {
     console.error('[Cron] Invalid schedule:', schedule);
     return false;
   }
 
   cron.schedule(schedule, async () => {
-    console.log('[Cron] ===== Daily fetch started at', new Date().toISOString(), '=====');
+    console.log('[Cron] ===== Tick at', new Date().toISOString(), '=====');
     await runFetch();
+    runParse();
     console.log('[Cron] ===== Done at', new Date().toISOString(), '=====');
   });
 
-  console.log(`[Cron] Scheduled: "${schedule}" (daily 06:00 WIB / 23:00 UTC)`);
+  console.log(`[Cron] Scheduled: "${schedule}" (every 15 minutes)`);
   console.log('[Cron] Keeping process alive. Ctrl+C to stop.');
   return true;
 }

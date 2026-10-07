@@ -1,0 +1,2957 @@
+{
+  "source": "KATALOG AL KHAIF GRUP (One Stop Haramain Service) - Full Screen.pdf",
+  "sourceType": "partner catalog",
+  "updatedAt": "2026-08-03",
+  "currency": "SAR (default), USD/IDR where noted",
+  "ratePerSAR": 4300,
+  "bookingContact": "Ms. Irma +62 813-6155-8722",
+  "note": "Meal Plan default FB Far East (Fullboard) unless noted. Per-room per-night prices unless noted.",
+  "hotels": [
+    {
+      "name": "Sheraton Makkah Jabal Al Kaabaa",
+      "city": "Makkah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "20 Jun 2026 - 15 Sep 2026",
+          "dbl": 775,
+          "trpl": 875,
+          "juniorSuiteQuad": 975,
+          "juniorSuite2PAX": 850,
+          "bedroom1APT": 950,
+          "bedroom2APT": 1700,
+          "bedroom3APT": 2000
+        },
+        {
+          "period": "15 Sep 2026 - 31 Oct 2026",
+          "dbl": 850,
+          "trpl": 950,
+          "juniorSuiteQuad": 1050,
+          "juniorSuite2PAX": 925,
+          "bedroom1APT": 1025,
+          "bedroom2APT": 1800,
+          "bedroom3APT": 2100
+        },
+        {
+          "period": "01 Nov 2026 - 30 Nov 2026",
+          "dbl": 900,
+          "trpl": 1000,
+          "juniorSuiteQuad": 1100,
+          "juniorSuite2PAX": 1000,
+          "bedroom1APT": 1125,
+          "bedroom2APT": 1900,
+          "bedroom3APT": 2250
+        },
+        {
+          "period": "30 Dec 2026 - 10 Jan 2027",
+          "rate": "COMING SOON"
+        },
+        {
+          "period": "10 Jan 2027 - 08 Feb 2027",
+          "dbl": 850,
+          "trpl": 950,
+          "juniorSuiteQuad": 1050,
+          "juniorSuite2PAX": 950,
+          "bedroom1APT": 1050,
+          "bedroom2APT": 1700,
+          "bedroom3APT": 2000
+        }
+      ]
+    },
+    {
+      "name": "Marriott Jabal Omar",
+      "city": "Makkah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "15 Jun 2026 - 31 Juli 2026",
+          "dbl": 850,
+          "trpl": 940,
+          "quad": 1030
+        },
+        {
+          "period": "31 Juli 2026 - 15 Oktober 2026",
+          "dbl": 900,
+          "trpl": 990,
+          "quad": 1080
+        },
+        {
+          "period": "15 Oktober 2026 - 15 Desember 2026",
+          "dbl": 950,
+          "trpl": 1050,
+          "quad": 1150
+        },
+        {
+          "period": "15 Desember 2026 - 10 Januari 2027",
+          "dbl": 1150,
+          "trpl": 1250,
+          "quad": 1350
+        },
+        {
+          "period": "15 Januari 2027 - 07 Februari 2027",
+          "dbl": 950,
+          "trpl": 1050,
+          "quad": 1150
+        }
+      ]
+    },
+    {
+      "name": "Al Marwa Rayhaan by Rotana",
+      "city": "Makkah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "25 Jun 2026 - 30 Jul 2026",
+          "dbl": 1250,
+          "trpl": 1520,
+          "quad": 1790
+        },
+        {
+          "period": "30 Jul 2026 - 30 Sep 2026",
+          "dbl": 1300,
+          "trpl": 1550,
+          "quad": 1800
+        },
+        {
+          "period": "30 Sep 2026 - 15 Dec 2026",
+          "dbl": 1350,
+          "trpl": 1600,
+          "quad": 1850
+        },
+        {
+          "period": "17 Dec 2026 - 10 Jan 2027",
+          "dbl": 1800,
+          "trpl": 2050,
+          "quad": 2300
+        }
+      ]
+    },
+    {
+      "name": "Al Safwa Tower",
+      "city": "Makkah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "16 Jun 2026 - 12 Oct 2026",
+          "dbl": 880,
+          "trpl": 1080,
+          "quad": 1280
+        },
+        {
+          "period": "13 Oct 2026 - 15 Dec 2026",
+          "dbl": 1130,
+          "trpl": 1330,
+          "quad": 1550
+        }
+      ]
+    },
+    {
+      "name": "Pullman Zamzam",
+      "city": "Makkah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "16 Jun 2026 - 01 Oct 2026",
+          "dbl": 1030,
+          "trpl": 1280,
+          "quad": 1550
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 1280,
+          "trpl": 1530,
+          "quad": 1800
+        }
+      ]
+    },
+    {
+      "name": "Anjum Makkah",
+      "city": "Makkah",
+      "stars": 5,
+      "category": "5-star",
+      "rates": [
+        {
+          "period": "30/07/2026 - 01/09/2026",
+          "dblWD": 625,
+          "trplWD": 745,
+          "quadWD": 865,
+          "dblWE": 675,
+          "trplWE": 795,
+          "quadWE": 915
+        },
+        {
+          "period": "01/09/2026 - 19/09/2026",
+          "dblWD": 655,
+          "trplWD": 775,
+          "quadWD": 895,
+          "dblWE": 705,
+          "trplWE": 825,
+          "quadWE": 945
+        },
+        {
+          "period": "19/09/2026 - 15/10/2026",
+          "dblWD": 705,
+          "trplWD": 825,
+          "quadWD": 945,
+          "dblWE": 780,
+          "trplWE": 900,
+          "quadWE": 1020
+        },
+        {
+          "period": "15/10/2026 - 17/12/2026",
+          "dblWD": 775,
+          "trplWD": 895,
+          "quadWD": 1015,
+          "dblWE": 850,
+          "trplWE": 970,
+          "quadWE": 1090
+        }
+      ]
+    },
+    {
+      "name": "Prestige Ajyad",
+      "city": "Makkah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "16 Jun 2026 - 15 Agt 2026",
+          "dbl": 630,
+          "trpl": 730,
+          "quad": 850
+        },
+        {
+          "period": "15 Agt 2026 - 15 Okt 2026",
+          "dbl": 680,
+          "trpl": 780,
+          "quad": 900
+        },
+        {
+          "period": "15 Okt 2026 - 15 Des 2026",
+          "dbl": 730,
+          "trpl": 830,
+          "quad": 950
+        },
+        {
+          "period": "15 Des 2026 - 08 Feb 2027",
+          "dbl": 980,
+          "trpl": 1080,
+          "quad": 1200
+        }
+      ]
+    },
+    {
+      "name": "Makarem Ajyad",
+      "city": "Makkah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "20 Juni 2026 - 15 Agustus 2026",
+          "dbl": 800,
+          "trpl": 920,
+          "quad": 1050
+        },
+        {
+          "period": "15 Agustus 2026 - 15 September 2026",
+          "dbl": 820,
+          "trpl": 945,
+          "quad": 1070
+        },
+        {
+          "period": "15 September 2026 - 15 Oktober 2026",
+          "dbl": 800,
+          "trpl": 925,
+          "quad": 1050
+        }
+      ]
+    },
+    {
+      "name": "Elaf Al Bait",
+      "city": "Makkah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 605,
+          "trpl": 705,
+          "quad": 805,
+          "quint": 905
+        },
+        {
+          "period": "01 Oct 2026 - 12 Dec 2026",
+          "dbl": 655,
+          "trpl": 755,
+          "quad": 855,
+          "quint": 955
+        },
+        {
+          "period": "12 Dec 2026 - 05 Jan 2027",
+          "dbl": 1085,
+          "trpl": 1190,
+          "quad": 1320,
+          "quint": 1450
+        },
+        {
+          "period": "05 Jan 2027 - 06 Feb 2027",
+          "dbl": 655,
+          "trpl": 755,
+          "quad": 855,
+          "quint": 955
+        }
+      ]
+    },
+    {
+      "name": "Elaf Diamond",
+      "city": "Makkah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 440,
+          "trpl": 485,
+          "quad": 530,
+          "quint": 575
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 480,
+          "trpl": 525,
+          "quad": 570,
+          "quint": 615
+        },
+        {
+          "period": "16 Dec 2026 - 05 Jan 2027",
+          "dbl": 805,
+          "trpl": 845,
+          "quad": 890,
+          "quint": 940
+        },
+        {
+          "period": "05 Jan 2027 - 06 Feb 2027",
+          "dbl": 450,
+          "trpl": 525,
+          "quad": 570,
+          "quint": 615
+        }
+      ]
+    },
+    {
+      "name": "Elaf Golden",
+      "city": "Makkah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 410,
+          "trpl": 450,
+          "quad": 490,
+          "quint": 530
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 430,
+          "trpl": 470,
+          "quad": 510,
+          "quint": 550
+        },
+        {
+          "period": "16 Dec 2026 - 05 Jan 2027",
+          "dbl": 530,
+          "trpl": 575,
+          "quad": 620,
+          "quint": 650
+        },
+        {
+          "period": "05 Jan 2027 - 06 Feb 2027",
+          "dbl": 450,
+          "trpl": 500,
+          "quad": 545,
+          "quint": 595
+        }
+      ]
+    },
+    {
+      "name": "Marsa Al Jaria",
+      "city": "Makkah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 470,
+          "trpl": 515,
+          "quad": 560,
+          "quint": 605
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 510,
+          "trpl": 555,
+          "quad": 600,
+          "quint": 645
+        },
+        {
+          "period": "16 Dec 2026 - 05 Jan 2027",
+          "dbl": 705,
+          "trpl": 750,
+          "quad": 795,
+          "quint": 845
+        },
+        {
+          "period": "05 Jan 2027 - 06 Feb 2027",
+          "dbl": 490,
+          "trpl": 535,
+          "quad": 580,
+          "quint": 625
+        }
+      ]
+    },
+    {
+      "name": "Saja & Le Meridien",
+      "city": "Makkah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Agustus - 03 Oktober",
+          "dbl": 340,
+          "trpl": 390,
+          "quad": 440
+        },
+        {
+          "period": "04 Oktober - 16 Desember",
+          "dbl": 520,
+          "trpl": 570,
+          "quad": 620
+        },
+        {
+          "period": "17 Desember - 15 Januari",
+          "dbl": 670,
+          "trpl": 720,
+          "quad": 770
+        }
+      ]
+    },
+    {
+      "name": "Al Shohada Hotel",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "16 Jul 2026 - 12 Sep 2026",
+          "dbl": 635,
+          "trpl": 735,
+          "quad": 835
+        },
+        {
+          "period": "15 Sep 2026 - 10 Nov 2026",
+          "dbl": 750,
+          "trpl": 850,
+          "quad": 950
+        },
+        {
+          "period": "13 Nov 2026 - 10 Dec 2026",
+          "dbl": 820,
+          "trpl": 920,
+          "quad": 1020
+        },
+        {
+          "period": "10 Dec 2026 - 20 Jan 2027",
+          "dbl": 1300,
+          "trpl": 1400,
+          "quad": 1500
+        }
+      ]
+    },
+    {
+      "name": "Diafa Mubarak",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 450,
+          "trpl": 490,
+          "quad": 530,
+          "quint": 570
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 480,
+          "trpl": 520,
+          "quad": 560,
+          "quint": 600
+        },
+        {
+          "period": "16 Dec 2026 - 01 Jan 2027",
+          "dbl": 530,
+          "trpl": 575,
+          "quad": 620,
+          "quint": 660
+        },
+        {
+          "period": "05 Jan 2027 - 06 Feb 2027",
+          "dbl": 470,
+          "trpl": 510,
+          "quad": 550,
+          "quint": 590
+        }
+      ]
+    },
+    {
+      "name": "Waha Diafa",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 270,
+          "trpl": 310,
+          "quad": 350,
+          "quint": 390
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 290,
+          "trpl": 330,
+          "quad": 370,
+          "quint": 410
+        }
+      ]
+    },
+    {
+      "name": "Kunuz Ajyad",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 470,
+          "trpl": 515,
+          "quad": 560,
+          "quint": 605
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 500,
+          "trpl": 545,
+          "quad": 590,
+          "quint": 635
+        },
+        {
+          "period": "16 Dec 2026 - 05 Jan 2027",
+          "dbl": 600,
+          "trpl": 645,
+          "quad": 690,
+          "quint": 735
+        },
+        {
+          "period": "05 Jan 2027 - 06 Feb 2027",
+          "dbl": 480,
+          "trpl": 535,
+          "quad": 580,
+          "quint": 625
+        }
+      ]
+    },
+    {
+      "name": "Elaf Al Khair",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 480,
+          "trpl": 525,
+          "quad": 570,
+          "quint": 615
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 505,
+          "trpl": 550,
+          "quad": 595,
+          "quint": 640
+        },
+        {
+          "period": "16 Dec 2026 - 05 Jan 2027",
+          "dbl": 620,
+          "trpl": 665,
+          "quad": 710,
+          "quint": 755
+        },
+        {
+          "period": "05 Jan 2027 - 06 Feb 2027",
+          "dbl": 495,
+          "trpl": 540,
+          "quad": 585,
+          "quint": 630
+        }
+      ]
+    },
+    {
+      "name": "Elaf Al Rayyan",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Aug 2026 - 30 Sep 2026",
+          "dbl": 470,
+          "trpl": 515,
+          "quad": 560,
+          "quint": 605
+        },
+        {
+          "period": "01 Oct 2026 - 16 Dec 2026",
+          "dbl": 500,
+          "trpl": 545,
+          "quad": 590,
+          "quint": 635
+        },
+        {
+          "period": "16 Dec 2026 - 05 Jan 2027",
+          "dbl": 620,
+          "trpl": 665,
+          "quad": 710,
+          "quint": 755
+        },
+        {
+          "period": "05 Jan 2027 - 06 Feb 2027",
+          "dbl": 485,
+          "trpl": 530,
+          "quad": 575,
+          "quint": 620
+        }
+      ]
+    },
+    {
+      "name": "Diafat Al Raja'a",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Agustus - 03 Oktober",
+          "dbl": 310,
+          "trpl": 350,
+          "quad": 390
+        },
+        {
+          "period": "04 Oktober - 16 Desember",
+          "dbl": 330,
+          "trpl": 370,
+          "quad": 410
+        },
+        {
+          "period": "17 Desember - 15 Januari",
+          "dbl": 380,
+          "trpl": 420,
+          "quad": 460
+        }
+      ]
+    },
+    {
+      "name": "Olayan Golden",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Agustus - 03 Oktober",
+          "dbl": 330,
+          "trpl": 370,
+          "quad": 410
+        },
+        {
+          "period": "04 Oktober - 16 Desember",
+          "dbl": 350,
+          "trpl": 390,
+          "quad": 430
+        },
+        {
+          "period": "17 Desember - 15 Januari",
+          "dbl": 410,
+          "trpl": 450,
+          "quad": 490
+        }
+      ]
+    },
+    {
+      "name": "Mathara",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Agustus - 03 Oktober",
+          "dbl": 245,
+          "trpl": 300,
+          "quad": 355
+        },
+        {
+          "period": "04 Oktober - 16 Desember",
+          "dbl": 295,
+          "trpl": 350,
+          "quad": 405
+        },
+        {
+          "period": "17 Desember - 15 Januari",
+          "dbl": 310,
+          "trpl": 365,
+          "quad": 420
+        }
+      ]
+    },
+    {
+      "name": "Zilal Al Nuzala",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Agustus - 03 Oktober",
+          "dbl": 350,
+          "trpl": 390,
+          "quad": 430
+        }
+      ]
+    },
+    {
+      "name": "Olayan Ajyad",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "16/06/2026 - 12/09/2026",
+          "dbl": 780,
+          "trpl": 880,
+          "quad": 980
+        },
+        {
+          "period": "12/09/2026 - 17/12/2026",
+          "dbl": 830,
+          "trpl": 930,
+          "quad": 1030
+        }
+      ]
+    },
+    {
+      "name": "Sawaeed Al Khaier",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "16/06/2026 - 15/08/2026",
+          "dbl": 450,
+          "trpl": 495,
+          "quad": 540
+        },
+        {
+          "period": "15/08/2026 - 15/10/2026",
+          "dbl": 490,
+          "trpl": 535,
+          "quad": 580
+        },
+        {
+          "period": "15/10/2026 - 15/12/2026",
+          "dbl": 520,
+          "trpl": 565,
+          "quad": 610
+        },
+        {
+          "period": "15/12/2026 - 06/02/2027",
+          "dbl": 620,
+          "trpl": 665,
+          "quad": 710
+        }
+      ]
+    },
+    {
+      "name": "Maysan Al Maqam",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "16/06/2026 - 15/08/2026",
+          "dbl": 480,
+          "trpl": 530,
+          "quad": 580
+        },
+        {
+          "period": "15/08/2026 - 15/10/2026",
+          "dbl": 530,
+          "trpl": 580,
+          "quad": 630
+        },
+        {
+          "period": "15/10/2026 - 15/12/2026",
+          "dbl": 580,
+          "trpl": 630,
+          "quad": 680
+        },
+        {
+          "period": "15/12/2026 - 06/02/2027",
+          "dbl": 730,
+          "trpl": 780,
+          "quad": 830
+        }
+      ]
+    },
+    {
+      "name": "Maysan Al Mashaeer",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30/07/2026 - 05/09/2026",
+          "dbl": 610,
+          "trpl": 690,
+          "quad": 770
+        },
+        {
+          "period": "05/09/2026 - 12/09/2026",
+          "dbl": 555,
+          "trpl": 635,
+          "quad": 715
+        },
+        {
+          "period": "12/09/2026 - 25/09/2026",
+          "dbl": 580,
+          "trpl": 660,
+          "quad": 740
+        },
+        {
+          "period": "25/09/2026 - 08/10/2026",
+          "dbl": 610,
+          "trpl": 690,
+          "quad": 770
+        },
+        {
+          "period": "08/10/2026 - 12/10/2026",
+          "dbl": 710,
+          "trpl": 790,
+          "quad": 870
+        },
+        {
+          "period": "12/10/2026 - 17/12/2026",
+          "dbl": 740,
+          "trpl": 820,
+          "quad": 900
+        }
+      ]
+    },
+    {
+      "name": "Royal Majestic",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30/07/2026 - 05/09/2026",
+          "dbl": 540,
+          "trpl": 590,
+          "quad": 640
+        },
+        {
+          "period": "05/09/2026 - 12/09/2026",
+          "dbl": 440,
+          "trpl": 490,
+          "quad": 540
+        },
+        {
+          "period": "12/09/2026 - 06/10/2026",
+          "dbl": 490,
+          "trpl": 540,
+          "quad": 590
+        },
+        {
+          "period": "06/10/2026 - 03/11/2026",
+          "dbl": 550,
+          "trpl": 600,
+          "quad": 650
+        },
+        {
+          "period": "03/11/2026 - 17/12/2026",
+          "dbl": 630,
+          "trpl": 680,
+          "quad": 730
+        }
+      ]
+    },
+    {
+      "name": "Grand Al Massa",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30/07/2026 - 05/09/2026",
+          "dbl": 525,
+          "trpl": 575,
+          "quad": 625
+        },
+        {
+          "period": "05/09/2026 - 12/09/2026",
+          "dbl": 455,
+          "trpl": 505,
+          "quad": 555
+        },
+        {
+          "period": "12/09/2026 - 06/10/2026",
+          "dbl": 525,
+          "trpl": 575,
+          "quad": 625
+        },
+        {
+          "period": "06/10/2026 - 05/11/2026",
+          "dbl": 605,
+          "trpl": 655,
+          "quad": 705
+        },
+        {
+          "period": "05/11/2026 - 17/12/2026",
+          "dbl": 625,
+          "trpl": 675,
+          "quad": 725
+        }
+      ]
+    },
+    {
+      "name": "Snood Ajyad",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30/07/2026 - 05/09/2026",
+          "dbl": 470,
+          "trpl": 515,
+          "quad": 560
+        },
+        {
+          "period": "05/09/2026 - 12/09/2026",
+          "dbl": 420,
+          "trpl": 465,
+          "quad": 510
+        },
+        {
+          "period": "12/09/2026 - 06/10/2026",
+          "dbl": 495,
+          "trpl": 540,
+          "quad": 585
+        },
+        {
+          "period": "06/10/2026 - 05/11/2026",
+          "dbl": 570,
+          "trpl": 615,
+          "quad": 660
+        },
+        {
+          "period": "05/11/2026 - 17/12/2026",
+          "dbl": 600,
+          "trpl": 645,
+          "quad": 690
+        }
+      ]
+    },
+    {
+      "name": "Ramada Al Fayzen",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30/07/2026 - 05/09/2026",
+          "dbl": 450,
+          "trpl": 500,
+          "quad": 550
+        },
+        {
+          "period": "05/09/2026 - 12/09/2026",
+          "dbl": 405,
+          "trpl": 455,
+          "quad": 505
+        },
+        {
+          "period": "12/09/2026 - 06/10/2026",
+          "dbl": 470,
+          "trpl": 520,
+          "quad": 570
+        },
+        {
+          "period": "06/10/2026 - 05/11/2026",
+          "dbl": 530,
+          "trpl": 580,
+          "quad": 630
+        },
+        {
+          "period": "05/11/2026 - 17/12/2026",
+          "dbl": 550,
+          "trpl": 600,
+          "quad": 650
+        }
+      ]
+    },
+    {
+      "name": "Al Manara",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30/07/2026 - 05/09/2026",
+          "dbl": 300,
+          "trpl": 325,
+          "quad": 340
+        },
+        {
+          "period": "05/09/2026 - 12/09/2026",
+          "dbl": 320,
+          "trpl": 355,
+          "quad": 370
+        },
+        {
+          "period": "12/09/2026 - 06/10/2026",
+          "dbl": 280,
+          "trpl": 315,
+          "quad": 350
+        },
+        {
+          "period": "06/10/2026 - 05/11/2026",
+          "dbl": 300,
+          "trpl": 335,
+          "quad": 370
+        },
+        {
+          "period": "05/11/2026 - 17/12/2026",
+          "dbl": 340,
+          "trpl": 375,
+          "quad": 410
+        }
+      ]
+    },
+    {
+      "name": "Wahat Ajyad",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: FB Far East)",
+      "rates": [
+        {
+          "period": "16/06/2026 - 31/07/2026",
+          "dbl": 370,
+          "trpl": 410,
+          "quad": 450
+        },
+        {
+          "period": "01/08/2026 - 04/10/2026",
+          "dbl": 390,
+          "trpl": 430,
+          "quad": 470
+        }
+      ]
+    },
+    {
+      "name": "Nada Ajyad",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: FB Far East)",
+      "rates": [
+        {
+          "period": "16/06/2026 - 14/08/2026",
+          "dbl": 400,
+          "trpl": 440,
+          "quad": 480
+        },
+        {
+          "period": "01/08/2026 - 12/09/2026",
+          "dbl": 340,
+          "trpl": 380,
+          "quad": 420
+        }
+      ]
+    },
+    {
+      "name": "Maather Al Jiwar",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: FB Far East)",
+      "rates": [
+        {
+          "period": "30/06/2026 - 31/07/2026",
+          "dbl": 320,
+          "trpl": 360,
+          "quad": 400
+        },
+        {
+          "period": "01/08/2026 - 12/09/2026",
+          "dbl": 340,
+          "trpl": 380,
+          "quad": 420
+        }
+      ]
+    },
+    {
+      "name": "Badr Al Massa",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: FB Far East)",
+      "rates": [
+        {
+          "period": "16/06/2026 - 15/08/2026",
+          "dbl": 300,
+          "trpl": 340,
+          "quad": 380
+        },
+        {
+          "period": "15/08/2026 - 15/10/2026",
+          "dbl": 330,
+          "trpl": 370,
+          "quad": 410
+        },
+        {
+          "period": "15/10/2026 - 15/12/2026",
+          "dbl": 360,
+          "trpl": 400,
+          "quad": 440
+        },
+        {
+          "period": "15/12/2026 - 06/02/2027",
+          "dbl": 410,
+          "trpl": 450,
+          "quad": 490
+        }
+      ]
+    },
+    {
+      "name": "Saraya Al Misk",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: FB Far East)",
+      "rates": [
+        {
+          "period": "30/06/2026 - 31/08/2026",
+          "dbl": 330,
+          "trpl": 370,
+          "quad": 410
+        },
+        {
+          "period": "01/09/2026 - 01/10/2026",
+          "dbl": 350,
+          "trpl": 390,
+          "quad": 430
+        }
+      ]
+    },
+    {
+      "name": "Azka Al Safa",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: FB Far East)",
+      "rates": [
+        {
+          "period": "20/06/2026 - 31/07/2026",
+          "dbl": 550,
+          "trpl": 600,
+          "quad": 650
+        },
+        {
+          "period": "01/07/2026 - 01/08/2026",
+          "dbl": 580,
+          "trpl": 655,
+          "quad": 730
+        },
+        {
+          "period": "01/08/2026 - 01/09/2026",
+          "dbl": 610,
+          "trpl": 695,
+          "quad": 780
+        }
+      ]
+    },
+    {
+      "name": "Azka Al Maqam",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: FB Far East)",
+      "rates": [
+        {
+          "period": "20/06/2026 - 01/07/2026",
+          "dbl": 580,
+          "trpl": 650,
+          "quad": 720
+        },
+        {
+          "period": "01/07/2026 - 01/08/2026",
+          "dbl": 630,
+          "trpl": 720,
+          "quad": 810
+        },
+        {
+          "period": "01/08/2026 - 01/09/2026",
+          "dbl": 660,
+          "trpl": 760,
+          "quad": 860
+        }
+      ]
+    },
+    {
+      "name": "Palestine",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: FB Far East)",
+      "rates": [
+        {
+          "period": "30/07/2026 - 15/12/2026",
+          "dbl": 440,
+          "trpl": 485,
+          "quad": 530
+        }
+      ]
+    },
+    {
+      "name": "Rehab Al Taqwa",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: RO - Room Only)",
+      "rates": [
+        {
+          "period": "30/07/2026 - 24/09/2026",
+          "room": 300
+        },
+        {
+          "period": "24/09/2026 - 15/10/2026",
+          "room": 330
+        },
+        {
+          "period": "15/10/2026 - 15/11/2026",
+          "room": 370
+        },
+        {
+          "period": "15/11/2026 - 10/12/2026",
+          "room": 400
+        }
+      ]
+    },
+    {
+      "name": "Hira Al Massi",
+      "city": "Makkah",
+      "stars": 3,
+      "category": "3-star (Meal: RO - Room Only)",
+      "rates": [
+        {
+          "period": "30/07/2026 - 15/08/2026",
+          "room": 280
+        },
+        {
+          "period": "15/08/2026 - 30/09/2026",
+          "room": 310
+        },
+        {
+          "period": "30/09/2026 - 15/11/2026",
+          "room": 330
+        },
+        {
+          "period": "15/10/2026 - 15/12/2026",
+          "room": 350
+        }
+      ]
+    },
+    {
+      "name": "Makarem Burj Al Madinah",
+      "city": "Madinah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "05 Jul 2026 - 14 Agustus 2026",
+          "dbl": 830,
+          "trpl": 980,
+          "quad": 1080
+        },
+        {
+          "period": "15 Agustus 2026 - 11 November 2026",
+          "dbl": 930,
+          "trpl": 1080,
+          "quad": 1230
+        },
+        {
+          "period": "11 November 2026 - 10 Desember 2026",
+          "dbl": 1130,
+          "trpl": 1280,
+          "quad": 1430
+        }
+      ]
+    },
+    {
+      "name": "Dar Al Eiman Al Haram",
+      "city": "Madinah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "30 Juni 2026 - 15 Agustus 2026",
+          "dbl": 830,
+          "trpl": 955,
+          "quad": 1080
+        },
+        {
+          "period": "15 Agustus 2026 - 11 November 2026",
+          "dbl": 930,
+          "trpl": 1055,
+          "quad": 1180
+        },
+        {
+          "period": "11 November 2026 - 10 Desember 2026",
+          "dbl": 1130,
+          "trpl": 1255,
+          "quad": 1380
+        }
+      ]
+    },
+    {
+      "name": "Millennium Al Aqeeq",
+      "city": "Madinah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "30 Juni 2026 - 20 September 2026",
+          "dbl": 755,
+          "trpl": 880,
+          "quad": 1005
+        },
+        {
+          "period": "20 September 2026 - 20 Oktober 2026",
+          "dbl": 830,
+          "trpl": 955,
+          "quad": 1080
+        }
+      ]
+    },
+    {
+      "name": "Ruve Hotel",
+      "city": "Madinah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "30 Juni 2026 - 14 Agustus 2026",
+          "dbl": 730,
+          "trpl": 855,
+          "quad": 980
+        },
+        {
+          "period": "14 Agustus 2026 - 20 September 2026",
+          "dbl": 755,
+          "trpl": 880,
+          "quad": 1005
+        }
+      ]
+    },
+    {
+      "name": "Grand Plaza Badr Al Maqam",
+      "city": "Madinah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "21 Juli 2026 - 20 September 2026",
+          "dbl": 550,
+          "trpl": 630,
+          "quad": 710
+        },
+        {
+          "period": "20 September 2026 - 22 Oktober 2026",
+          "dbl": 580,
+          "trpl": 660,
+          "quad": 740
+        },
+        {
+          "period": "22 Oktober 2026 - 19 November 2026",
+          "dbl": 755,
+          "trpl": 835,
+          "quad": 915
+        },
+        {
+          "period": "19 November 2026 - 17 Desember 2026",
+          "dbl": 885,
+          "trpl": 965,
+          "quad": 1045
+        },
+        {
+          "period": "17 Desember 2026 - 24 Desember 2026",
+          "dbl": 960,
+          "trpl": 1040,
+          "quad": 1120
+        },
+        {
+          "period": "24 Desember 2026 - 09 Januari 2027",
+          "dbl": 1250,
+          "trpl": 1330,
+          "quad": 1410
+        },
+        {
+          "period": "09 Januari 2027 - 07 Februari 2027",
+          "dbl": 885,
+          "trpl": 965,
+          "quad": 1045
+        }
+      ]
+    },
+    {
+      "name": "Shaza Regency Plaza",
+      "city": "Madinah",
+      "stars": 5,
+      "category": "5-star premium",
+      "rates": [
+        {
+          "period": "21 Juli 2026 - 20 September 2026",
+          "dbl": 520,
+          "trpl": 610,
+          "quad": 690
+        },
+        {
+          "period": "20 September 2026 - 22 Oktober 2026",
+          "dbl": 560,
+          "trpl": 640,
+          "quad": 720
+        },
+        {
+          "period": "22 Oktober 2026 - 19 November 2026",
+          "dbl": 740,
+          "trpl": 820,
+          "quad": 900
+        },
+        {
+          "period": "19 November 2026 - 17 Desember 2026",
+          "dbl": 885,
+          "trpl": 965,
+          "quad": 1045
+        },
+        {
+          "period": "17 Desember 2026 - 24 Desember 2026",
+          "dbl": 960,
+          "trpl": 1040,
+          "quad": 1120
+        },
+        {
+          "period": "24 Desember 2026 - 09 Januari 2027",
+          "dbl": 1250,
+          "trpl": 1330,
+          "quad": 1410
+        },
+        {
+          "period": "09 Januari 2027 - 07 Februari 2027",
+          "dbl": 885,
+          "trpl": 965,
+          "quad": 1045
+        }
+      ]
+    },
+    {
+      "name": "Grand Plaza Al Madina",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "26 Jun 2026 - 20 September 2026",
+          "dbl": 510,
+          "trpl": 580,
+          "quad": 650
+        },
+        {
+          "period": "20 September 2026 - 22 Oktober 2026",
+          "dbl": 530,
+          "trpl": 600,
+          "quad": 670
+        },
+        {
+          "period": "22 Oktober 2026 - 19 November 2026",
+          "dbl": 655,
+          "trpl": 725,
+          "quad": 795
+        },
+        {
+          "period": "19 November 2026 - 17 Desember 2026",
+          "dbl": 780,
+          "trpl": 850,
+          "quad": 920
+        },
+        {
+          "period": "17 Desember 2026 - 24 Desember 2026",
+          "dbl": 840,
+          "trpl": 890,
+          "quad": 980
+        },
+        {
+          "period": "24 Desember 2026 - 09 Januari 2027",
+          "dbl": 1095,
+          "trpl": 1195,
+          "quad": 1295
+        },
+        {
+          "period": "09 Januari 2027 - 07 Februari 2027",
+          "dbl": 780,
+          "trpl": 850,
+          "quad": 920
+        }
+      ]
+    },
+    {
+      "name": "Plaza Inn Ohud",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "26 Jun 2026 - 20 September 2026",
+          "dbl": 365,
+          "trpl": 415,
+          "quad": 465
+        },
+        {
+          "period": "20 September 2026 - 22 Oktober 2026",
+          "dbl": 385,
+          "trpl": 435,
+          "quad": 485
+        },
+        {
+          "period": "22 Oktober 2026 - 19 November 2026",
+          "dbl": 495,
+          "trpl": 545,
+          "quad": 595
+        },
+        {
+          "period": "19 November 2026 - 17 Desember 2026",
+          "dbl": 590,
+          "trpl": 640,
+          "quad": 690
+        },
+        {
+          "period": "17 Desember 2026 - 24 Desember 2026",
+          "dbl": 645,
+          "trpl": 695,
+          "quad": 745
+        },
+        {
+          "period": "24 Desember 2026 - 09 Januari 2027",
+          "dbl": 755,
+          "trpl": 805,
+          "quad": 855
+        },
+        {
+          "period": "09 Januari 2027 - 07 Februari 2027",
+          "dbl": 590,
+          "trpl": 640,
+          "quad": 690
+        }
+      ]
+    },
+    {
+      "name": "Al Ansar Golden Tulip",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Juli 2026 - 14 Agustus 2026",
+          "dbl": 500,
+          "trpl": 545,
+          "quad": 590
+        },
+        {
+          "period": "15 Agustus 2026 - 26 September 2026",
+          "dbl": 520,
+          "trpl": 565,
+          "quad": 610
+        },
+        {
+          "period": "20 September 2026 - 04 Oktober 2026",
+          "dbl": 560,
+          "trpl": 605,
+          "quad": 650
+        }
+      ]
+    },
+    {
+      "name": "Qasr Al Ansar Golden Tulip",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "28 Juni 2026 - 16 Juli 2026",
+          "dbl": 370,
+          "trpl": 415,
+          "quad": 460
+        },
+        {
+          "period": "15 Juli 2026 - 14 Agustus 2026",
+          "dbl": 410,
+          "trpl": 455,
+          "quad": 500
+        },
+        {
+          "period": "14 Agustus 2026 - 12 September 2026",
+          "dbl": 430,
+          "trpl": 515,
+          "quad": 560
+        },
+        {
+          "period": "12 September 2026 - 22 Oktober 2026",
+          "dbl": 540,
+          "trpl": 585,
+          "quad": 630
+        },
+        {
+          "period": "22 Oktober 2026 - 10 Desember 2026",
+          "dbl": 545,
+          "trpl": 590,
+          "quad": 635
+        }
+      ]
+    },
+    {
+      "name": "Triple One Hotel",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "30 Jun 2026 - 15 Juli 2026",
+          "dbl": 390,
+          "trpl": 435,
+          "quad": 480
+        },
+        {
+          "period": "15 Jul 2026 - 14 Agustus 2026",
+          "dbl": 440,
+          "trpl": 485,
+          "quad": 530
+        },
+        {
+          "period": "14 Agustus 2026 - 12 September 2026",
+          "dbl": 505,
+          "trpl": 550,
+          "quad": 595
+        },
+        {
+          "period": "12 September 2026 - 22 Oktober 2026",
+          "dbl": 540,
+          "trpl": 585,
+          "quad": 630
+        },
+        {
+          "period": "22 Oktober 2026 - 10 Desember 2026",
+          "dbl": 630,
+          "trpl": 675,
+          "quad": 720
+        }
+      ]
+    },
+    {
+      "name": "Jiwar Al Saha",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "30 Juni 2026 - 31 Juli 2026",
+          "dbl": 480,
+          "trpl": 530,
+          "quad": 580
+        },
+        {
+          "period": "01 Agustus 2026 - 01 September 2026",
+          "dbl": 510,
+          "trpl": 560,
+          "quad": 610
+        },
+        {
+          "period": "01 September 2026 - 05 Oktober 2026",
+          "dbl": 530,
+          "trpl": 580,
+          "quad": 630
+        }
+      ]
+    },
+    {
+      "name": "Zowar International",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Juli 2026 - 14 Agustus 2026",
+          "dbl": 480,
+          "trpl": 525,
+          "quad": 570
+        },
+        {
+          "period": "15 Agustus 2026 - 20 September 2026",
+          "dbl": 510,
+          "trpl": 555,
+          "quad": 600
+        },
+        {
+          "period": "20 September 2026 - 04 Oktober 2026",
+          "dbl": 540,
+          "trpl": 585,
+          "quad": 630
+        }
+      ]
+    },
+    {
+      "name": "Deyar Al Eiman",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "30 Jul 2026 - 14 Agustus 2026",
+          "dbl": 505,
+          "trpl": 555,
+          "quad": 605,
+          "quint": 655
+        },
+        {
+          "period": "15 Agustus 2026 - 11 November 2026",
+          "dbl": 555,
+          "trpl": 605,
+          "quad": 655,
+          "quint": 705
+        },
+        {
+          "period": "11 November 2026 - 10 Desember 2026",
+          "dbl": 605,
+          "trpl": 655,
+          "quad": 705,
+          "quint": 755
+        }
+      ]
+    },
+    {
+      "name": "Durrat El Eiman",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "30 Jul 2026 - 14 Agustus 2026",
+          "dbl": 455,
+          "trpl": 505,
+          "quad": 555,
+          "quint": 605
+        },
+        {
+          "period": "15 Agustus 2026 - 11 November 2026",
+          "dbl": 505,
+          "trpl": 555,
+          "quad": 605,
+          "quint": 655
+        },
+        {
+          "period": "11 November 2026 - 10 Desember 2026",
+          "dbl": 555,
+          "trpl": 605,
+          "quad": 655,
+          "quint": 705
+        }
+      ]
+    },
+    {
+      "name": "Hayatt International",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Jul 2026 - 14 Agustus 2026",
+          "dbl": 460,
+          "trpl": 505,
+          "quad": 550
+        },
+        {
+          "period": "15 Agustus 2026 - 20 September 2026",
+          "dbl": 490,
+          "trpl": 535,
+          "quad": 580
+        },
+        {
+          "period": "20 September 2026 - 04 Oktober 2026",
+          "dbl": 530,
+          "trpl": 575,
+          "quad": 620
+        }
+      ]
+    },
+    {
+      "name": "Concode Al Nazeel",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Jul 2026 - 15 Agustus 2026",
+          "dbl": 450,
+          "trpl": 495,
+          "quad": 540
+        },
+        {
+          "period": "15 Agustus 2026 - 12 September 2026",
+          "dbl": 480,
+          "trpl": 525,
+          "quad": 570
+        },
+        {
+          "period": "12 September 2026 - 12 Oktober 2026",
+          "dbl": 500,
+          "trpl": 595,
+          "quad": 640
+        },
+        {
+          "period": "12 Oktober 2026 - 12 November 2026",
+          "dbl": 670,
+          "trpl": 715,
+          "quad": 760
+        }
+      ]
+    },
+    {
+      "name": "Golden Tulip Al Shakereen",
+      "city": "Madinah",
+      "stars": 4,
+      "category": "4-star",
+      "rates": [
+        {
+          "period": "01 Jul 2026 - 15 Agustus 2026",
+          "dbl": 450,
+          "trpl": 495,
+          "quad": 540
+        },
+        {
+          "period": "15 Agustus 2026 - 12 September 2026",
+          "dbl": 480,
+          "trpl": 525,
+          "quad": 570
+        },
+        {
+          "period": "12 September 2026 - 12 Oktober 2026",
+          "dbl": 550,
+          "trpl": 595,
+          "quad": 640
+        },
+        {
+          "period": "12 Oktober 2026 - 12 November 2026",
+          "dbl": 670,
+          "trpl": 715,
+          "quad": 760
+        }
+      ]
+    },
+    {
+      "name": "Maysan Rehab Elmysk",
+      "city": "Madinah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30 Juni 2026 - 20 September 2026",
+          "dbl": 460,
+          "trpl": 520,
+          "quad": 580
+        },
+        {
+          "period": "20 September 2026 - 22 Oktober 2026",
+          "dbl": 485,
+          "trpl": 545,
+          "quad": 605
+        },
+        {
+          "period": "22 Oktober 2026 - 19 November 2026",
+          "dbl": 590,
+          "trpl": 650,
+          "quad": 710
+        },
+        {
+          "period": "19 November 2026 - 17 Desember 2026",
+          "dbl": 695,
+          "trpl": 755,
+          "quad": 815
+        },
+        {
+          "period": "17 Desember 2026 - 24 Desember 2026",
+          "dbl": 720,
+          "trpl": 780,
+          "quad": 840
+        },
+        {
+          "period": "24 Desember 2026 - 09 Januari 2027",
+          "dbl": 890,
+          "trpl": 950,
+          "quad": 1010
+        },
+        {
+          "period": "09 Januari 2027 - 07 Februari 2027",
+          "dbl": 695,
+          "trpl": 755,
+          "quad": 815
+        }
+      ]
+    },
+    {
+      "name": "Maysan Rotana Elmysk",
+      "city": "Madinah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30 Juni 2026 - 20 September 2026",
+          "dbl": 460,
+          "trpl": 525,
+          "quad": 580
+        },
+        {
+          "period": "20 September 2026 - 22 Oktober 2026",
+          "dbl": 485,
+          "trpl": 545,
+          "quad": 605
+        },
+        {
+          "period": "22 Oktober 2026 - 19 November 2026",
+          "dbl": 590,
+          "trpl": 650,
+          "quad": 710
+        },
+        {
+          "period": "19 November 2026 - 17 Desember 2026",
+          "dbl": 695,
+          "trpl": 755,
+          "quad": 815
+        },
+        {
+          "period": "17 Desember 2026 - 24 Desember 2026",
+          "dbl": 720,
+          "trpl": 780,
+          "quad": 840
+        },
+        {
+          "period": "24 Desember 2026 - 09 Januari 2027",
+          "dbl": 890,
+          "trpl": 950,
+          "quad": 1010
+        },
+        {
+          "period": "09 Januari 2027 - 07 Februari 2027",
+          "dbl": 695,
+          "trpl": 755,
+          "quad": 815
+        }
+      ]
+    },
+    {
+      "name": "Arkan Al Manar",
+      "city": "Madinah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30 Juni 2026 - 20 September 2026",
+          "dbl": 460,
+          "trpl": 520,
+          "quad": 580
+        },
+        {
+          "period": "20 September 2026 - 22 Oktober 2026",
+          "dbl": 485,
+          "trpl": 545,
+          "quad": 605
+        },
+        {
+          "period": "22 Oktober 2026 - 19 November 2026",
+          "dbl": 590,
+          "trpl": 650,
+          "quad": 710
+        },
+        {
+          "period": "19 November 2026 - 17 Desember 2026",
+          "dbl": 695,
+          "trpl": 755,
+          "quad": 815
+        },
+        {
+          "period": "17 Desember 2026 - 24 Desember 2026",
+          "dbl": 720,
+          "trpl": 780,
+          "quad": 840
+        },
+        {
+          "period": "24 Desember 2026 - 09 Januari 2027",
+          "dbl": 890,
+          "trpl": 950,
+          "quad": 1010
+        },
+        {
+          "period": "09 Januari 2027 - 07 Februari 2027",
+          "dbl": 695,
+          "trpl": 755,
+          "quad": 815
+        }
+      ]
+    },
+    {
+      "name": "Maysan Al Taqwa",
+      "city": "Madinah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "23 Juni 2026 - 20 September 2026",
+          "dbl": 390,
+          "trpl": 440,
+          "quad": 490
+        },
+        {
+          "period": "20 September 2026 - 22 Oktober 2026",
+          "dbl": 420,
+          "trpl": 470,
+          "quad": 520
+        },
+        {
+          "period": "22 Oktober 2026 - 19 November 2026",
+          "dbl": 510,
+          "trpl": 560,
+          "quad": 610
+        },
+        {
+          "period": "19 November 2026 - 17 Desember 2026",
+          "dbl": 640,
+          "trpl": 690,
+          "quad": 740
+        },
+        {
+          "period": "17 Desember 2026 - 24 Desember 2026",
+          "dbl": 665,
+          "trpl": 715,
+          "quad": 765
+        },
+        {
+          "period": "24 Desember 2026 - 09 Januari 2027",
+          "dbl": 765,
+          "trpl": 815,
+          "quad": 865
+        },
+        {
+          "period": "09 Januari 2027 - 07 Februari 2027",
+          "dbl": 640,
+          "trpl": 690,
+          "quad": 740
+        }
+      ]
+    },
+    {
+      "name": "Odest",
+      "city": "Madinah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "30 Jun 2026 - 14 Agustus 2026",
+          "dbl": 460,
+          "trpl": 505,
+          "quad": 550
+        },
+        {
+          "period": "15 Agustus 2026 - 20 September 2026",
+          "dbl": 490,
+          "trpl": 535,
+          "quad": 580
+        },
+        {
+          "period": "20 September 2026 - 04 Oktober 2026",
+          "dbl": 530,
+          "trpl": 575,
+          "quad": 620
+        }
+      ]
+    },
+    {
+      "name": "Rawaby Al Zahra",
+      "city": "Madinah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Jul 2026 - 15 Agustus 2026",
+          "dbl": 410,
+          "trpl": 455,
+          "quad": 500
+        },
+        {
+          "period": "15 Agustus 2026 - 12 September 2026",
+          "dbl": 440,
+          "trpl": 485,
+          "quad": 530
+        },
+        {
+          "period": "12 September 2026 - 12 Oktober 2026",
+          "dbl": 460,
+          "trpl": 505,
+          "quad": 550
+        },
+        {
+          "period": "12 Oktober 2026 - 12 November 2026",
+          "dbl": 510,
+          "trpl": 555,
+          "quad": 600
+        }
+      ]
+    },
+    {
+      "name": "Manazel Al Safiyah",
+      "city": "Madinah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Jul 2026 - 15 Agustus 2026",
+          "dbl": 410,
+          "trpl": 455,
+          "quad": 500
+        },
+        {
+          "period": "15 Agustus 2026 - 12 September 2026",
+          "dbl": 440,
+          "trpl": 485,
+          "quad": 530
+        },
+        {
+          "period": "12 September 2026 - 12 Oktober 2026",
+          "dbl": 460,
+          "trpl": 505,
+          "quad": 550
+        }
+      ]
+    },
+    {
+      "name": "Al Mokhtara Al Gharbi",
+      "city": "Madinah",
+      "stars": 3,
+      "category": "3-star",
+      "rates": [
+        {
+          "period": "01 Jul 2026 - 14 Agustus 2026",
+          "dbl": 370,
+          "trpl": 470,
+          "quad": 490
+        },
+        {
+          "period": "15 Agustus 2026 - 20 September 2026",
+          "dbl": 400,
+          "trpl": 440,
+          "quad": 480
+        },
+        {
+          "period": "20 September 2026 - 04 Oktober 2026",
+          "dbl": 490,
+          "trpl": 530,
+          "quad": 570
+        }
+      ]
+    },
+    {
+      "name": "Anwar Al Zahra",
+      "city": "Madinah",
+      "stars": 2,
+      "category": "Ekonomis",
+      "rates": [
+        {
+          "period": "15 Juli 2026 - 15 Agustus 2026",
+          "dbl": 340,
+          "trpl": 380,
+          "quad": 420
+        },
+        {
+          "period": "15 Agustus 2026 - 12 September 2026",
+          "dbl": 380,
+          "trpl": 420,
+          "quad": 460
+        },
+        {
+          "period": "12 September 2026 - 12 Oktober 2026",
+          "dbl": 395,
+          "trpl": 435,
+          "quad": 475
+        },
+        {
+          "period": "12 Oktober 2026 - 12 November 2026",
+          "dbl": 450,
+          "trpl": 490,
+          "quad": 530
+        }
+      ]
+    },
+    {
+      "name": "Mohamadia Al Zahra",
+      "city": "Madinah",
+      "stars": 2,
+      "category": "Ekonomis",
+      "rates": [
+        {
+          "period": "15 Juli 2026 - 15 Agustus 2026",
+          "dbl": 340,
+          "trpl": 380,
+          "quad": 420
+        },
+        {
+          "period": "15 Agustus 2026 - 12 September 2026",
+          "dbl": 380,
+          "trpl": 420,
+          "quad": 460
+        },
+        {
+          "period": "12 September 2026 - 12 Oktober 2026",
+          "dbl": 395,
+          "trpl": 435,
+          "quad": 475
+        },
+        {
+          "period": "12 Oktober 2026 - 12 November 2026",
+          "dbl": 450,
+          "trpl": 490,
+          "quad": 530
+        }
+      ]
+    }
+  ],
+  "transport": [
+    {
+      "vehicle": "Sedan",
+      "fullTripJeddahJED": 1900,
+      "rates": [
+        {
+          "route": "Airport Jeddah → Hotel Makkah",
+          "price": 375
+        },
+        {
+          "route": "Hotel Makkah → Airport Jeddah",
+          "price": 275
+        },
+        {
+          "route": "City Tour Makkah",
+          "price": 300
+        },
+        {
+          "route": "Stasiun Ihrar Makkah → Hotel Makkah",
+          "price": 200
+        },
+        {
+          "route": "Ziarah Jabal Khondamah",
+          "price": 250
+        },
+        {
+          "route": "City Tour Thaif",
+          "price": 500
+        },
+        {
+          "route": "Makkah → Madinah",
+          "price": 500
+        },
+        {
+          "route": "Madinah → Makkah",
+          "price": 500
+        },
+        {
+          "route": "City Tour Madinah",
+          "price": 300
+        },
+        {
+          "route": "Madinah → Airport Jeddah",
+          "price": 500
+        },
+        {
+          "route": "Stasiun Ihrar Madinah → Hotel Madinah",
+          "price": 200
+        },
+        {
+          "route": "Airport Madinah → Hotel Madinah",
+          "price": 300
+        },
+        {
+          "route": "Hotel Madinah → Airport Madinah",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "vehicle": "Hyundai Staria",
+      "fullTripJeddahJED": 2300,
+      "rates": [
+        {
+          "route": "Airport Jeddah → Hotel Makkah",
+          "price": 400
+        },
+        {
+          "route": "Hotel Makkah → Airport Jeddah",
+          "price": 350
+        },
+        {
+          "route": "City Tour Makkah",
+          "price": 375
+        },
+        {
+          "route": "Stasiun Ihrar Makkah → Hotel Makkah",
+          "price": 250
+        },
+        {
+          "route": "Ziarah Jabal Khondamah",
+          "price": 250
+        },
+        {
+          "route": "City Tour Thaif",
+          "price": 650
+        },
+        {
+          "route": "Makkah → Madinah",
+          "price": 600
+        },
+        {
+          "route": "Madinah → Makkah",
+          "price": 600
+        },
+        {
+          "route": "City Tour Madinah",
+          "price": 350
+        },
+        {
+          "route": "Madinah → Airport Jeddah",
+          "price": 600
+        },
+        {
+          "route": "Stasiun Ihrar Madinah → Hotel Madinah",
+          "price": 300
+        },
+        {
+          "route": "Airport Madinah → Hotel Madinah",
+          "price": 350
+        },
+        {
+          "route": "Hotel Madinah → Airport Madinah",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "vehicle": "Toyota Hiace",
+      "fullTripJeddahJED": 2450,
+      "rates": [
+        {
+          "route": "Airport Jeddah → Hotel Makkah",
+          "price": 450
+        },
+        {
+          "route": "Hotel Makkah → Airport Jeddah",
+          "price": 400
+        },
+        {
+          "route": "City Tour Makkah",
+          "price": 400
+        },
+        {
+          "route": "Stasiun Ihrar Makkah → Hotel Makkah",
+          "price": 300
+        },
+        {
+          "route": "Ziarah Jabal Khondamah",
+          "price": 300
+        },
+        {
+          "route": "City Tour Thaif",
+          "price": 700
+        },
+        {
+          "route": "Makkah → Madinah",
+          "price": 650
+        },
+        {
+          "route": "Madinah → Makkah",
+          "price": 650
+        },
+        {
+          "route": "City Tour Madinah",
+          "price": 350
+        },
+        {
+          "route": "Madinah → Airport Jeddah",
+          "price": 650
+        },
+        {
+          "route": "Stasiun Ihrar Madinah → Hotel Madinah",
+          "price": 350
+        },
+        {
+          "route": "Airport Madinah → Hotel Madinah",
+          "price": 400
+        },
+        {
+          "route": "Hotel Madinah → Airport Madinah",
+          "price": 350
+        }
+      ]
+    },
+    {
+      "vehicle": "GMC Yukon",
+      "fullTripJeddahJED": 3200,
+      "rates": [
+        {
+          "route": "Airport Jeddah → Hotel Makkah",
+          "price": 550
+        },
+        {
+          "route": "Hotel Makkah → Airport Jeddah",
+          "price": 500
+        },
+        {
+          "route": "City Tour Makkah",
+          "price": 450
+        },
+        {
+          "route": "Stasiun Ihrar Makkah → Hotel Makkah",
+          "price": 300
+        },
+        {
+          "route": "Ziarah Jabal Khondamah",
+          "price": 350
+        },
+        {
+          "route": "City Tour Thaif",
+          "price": 900
+        },
+        {
+          "route": "Makkah → Madinah",
+          "price": 900
+        },
+        {
+          "route": "Madinah → Makkah",
+          "price": 900
+        },
+        {
+          "route": "City Tour Madinah",
+          "price": 450
+        },
+        {
+          "route": "Madinah → Airport Jeddah",
+          "price": 900
+        },
+        {
+          "route": "Stasiun Ihrar Madinah → Hotel Madinah",
+          "price": 350
+        },
+        {
+          "route": "Airport Madinah → Hotel Madinah",
+          "price": 400
+        },
+        {
+          "route": "Hotel Madinah → Airport Madinah",
+          "price": 350
+        }
+      ]
+    },
+    {
+      "vehicle": "Coaster (mini bus)",
+      "rates": [
+        {
+          "route": "Jeddah Airport → Makkah Hotel",
+          "price": 770
+        },
+        {
+          "route": "Makkah Hotel → Jeddah Airport",
+          "price": 650
+        },
+        {
+          "route": "Makkah Hotel → Madinah Hotel",
+          "price": 970
+        },
+        {
+          "route": "Madinah Hotel → Makkah Hotel",
+          "price": 970
+        },
+        {
+          "route": "Madinah Airport → Madinah Hotel",
+          "price": 620
+        },
+        {
+          "route": "Madinah Hotel → Madinah Airport",
+          "price": 510
+        },
+        {
+          "route": "Makkah Ziarah (Sightseeing)",
+          "price": 520
+        },
+        {
+          "route": "Madinah Ziarah (Sightseeing)",
+          "price": 520
+        },
+        {
+          "route": "Jeddah Airport → Madinah Hotel",
+          "price": 970
+        },
+        {
+          "route": "Makkah → Taif & Return",
+          "price": 970
+        },
+        {
+          "route": "Jeddah Airport → Jeddah Hotel",
+          "price": 470
+        },
+        {
+          "route": "Hotel → Train Station",
+          "price": 470
+        },
+        {
+          "route": "Train Station → Hotel",
+          "price": 470
+        },
+        {
+          "route": "Jabal Khondamah",
+          "price": 470
+        }
+      ]
+    },
+    {
+      "vehicle": "Bus (48 seat)",
+      "fullTripJeddahJED": 2600,
+      "rates": [
+        {
+          "route": "City Tour Thaif",
+          "price": 950
+        },
+        {
+          "route": "City Tour Makkah",
+          "price": 500
+        },
+        {
+          "route": "City Tour Hudaybiyah",
+          "price": 500
+        },
+        {
+          "route": "Miqot Tan'im",
+          "price": 400
+        },
+        {
+          "route": "Pasar Rakiyah",
+          "price": 450
+        },
+        {
+          "route": "Museum Wahyu",
+          "price": 450
+        },
+        {
+          "route": "Stasiun Kereta Cepat",
+          "price": 400
+        }
+      ],
+      "madinahRoutes": [
+        {
+          "route": "City Tour Badar",
+          "price": 1000
+        },
+        {
+          "route": "City Tour Madinah",
+          "price": 500
+        },
+        {
+          "route": "Percetakan Qur'an & Jibal Magnet",
+          "price": 500
+        },
+        {
+          "route": "Stasiun Kereta Cepat",
+          "price": 400
+        }
+      ]
+    }
+  ],
+  "visa": [
+    {
+      "name": "Visa Umroh Only",
+      "rules": [
+        {
+          "minPax": 35,
+          "priceUSD": 125,
+          "note": "Bonus Handling Kedatangan & Porter"
+        },
+        {
+          "maxPax": 34,
+          "priceSAR": 125,
+          "note": "Pax ke bawah"
+        }
+      ]
+    },
+    {
+      "name": "Visa + Bus Full Trip",
+      "rules": [
+        {
+          "minPax": 35,
+          "priceUSD": 145,
+          "note": "Bonus Handling Kedatangan & Porter"
+        }
+      ]
+    },
+    {
+      "name": "Bus Full 5 Trip",
+      "priceSAR": 2600,
+      "includes": [
+        "Penjemputan ke Bandara",
+        "City Tour Makkah",
+        "Makkah to Madinah",
+        "City Tour Madinah",
+        "Pengantaran Pulang Madinah to Airport Jeddah"
+      ]
+    },
+    {
+      "name": "Nasi Box Bandara JED/MED",
+      "items": [
+        {
+          "variant": "Ayam",
+          "priceSAR": 15
+        },
+        {
+          "variant": "Daging",
+          "priceSAR": 17
+        },
+        {
+          "variant": "Albaik",
+          "priceSAR": 30,
+          "minPax": 20,
+          "note": "Minimal 20 box"
+        }
+      ],
+      "delivery": "Langsung diantarkan ke Bandara",
+      "leadTime": "Pemes minimal 1 Hari sebelum Hari H nya"
+    }
+  ],
+  "services": [
+    {
+      "category": "Catering & Buffet",
+      "items": [
+        {
+          "name": "Buffet",
+          "priceSAR": 45,
+          "unit": "/Pax/3× Makan per Hari",
+          "minPax": 10
+        },
+        {
+          "name": "Nasi Box",
+          "priceSAR": 17,
+          "unit": "/Pax/Sekali Makan",
+          "minPax": 10
+        }
+      ]
+    },
+    {
+      "category": "Jasa Laundry",
+      "items": [
+        {
+          "name": "Laundry",
+          "priceSAR": 15,
+          "unit": "/Kg",
+          "minKg": 5,
+          "hours": "In Syaa Allah Siap 24 Jam"
+        }
+      ]
+    },
+    {
+      "category": "Handling Kepulangan Saja",
+      "items": [
+        {
+          "name": "Handling Kepulangan",
+          "priceSAR": 70,
+          "unit": "/Pax",
+          "minPax": 35,
+          "includes": [
+            "Air Zam-zam 5 Liter",
+            "Chek In Tiket",
+            "Porter",
+            "Nasi Box",
+            "Baksis Sopir Bus Kepulangan"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Snack & Mineral untuk City Tour",
+      "items": [
+        {
+          "name": "Snack Pack",
+          "priceSAR": 6,
+          "unit": "/Paket",
+          "minPax": 21
+        },
+        {
+          "name": "Snack Pack",
+          "priceSAR": 8,
+          "unit": "/Paket",
+          "minPax": "11-20"
+        },
+        {
+          "name": "Snack Pack",
+          "priceSAR": 10,
+          "unit": "/Paket",
+          "minPax": "10 ke bawah"
+        }
+      ]
+    },
+    {
+      "category": "Jasa Badal Umroh",
+      "items": [
+        {
+          "name": "Badal Umroh",
+          "priceIDR": 1000000,
+          "unit": "/Badal",
+          "includes": [
+            "Dokumentasi Cuplikan",
+            "Video Pelaksanaan Rukun Umroh"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Jasa Dorongan Umroh",
+      "items": [
+        {
+          "name": "Dorongan Umroh",
+          "priceIDR": 1200000,
+          "unit": "/Jama'ah",
+          "includes": [
+            "Penjemputan dari Hotel",
+            "Thowaf dan Sai",
+            "Dokumentasi Foto",
+            "Pengantaran kembali ke Hotel",
+            "Air Zam-zam Minum Jama'ah di Hotel (Kondisional Jika Memungkinkan)"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Jasa Dorongan Thowaf Wada'",
+      "items": [
+        {
+          "name": "Dorongan Thowaf Wada'",
+          "priceIDR": 900000,
+          "unit": "/Jama'ah",
+          "includes": [
+            "Penjemputan dari Hotel",
+            "Thowaf wada'",
+            "Dokumentasi Foto",
+            "Pengantaran kembali ke Hotel"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Jasa Muthawwif/ah",
+      "items": [
+        {
+          "name": "Muthawwif Harian",
+          "priceSAR": 300,
+          "unit": "/Hari"
+        },
+        {
+          "name": "Muthawwif Paket 9 Hari",
+          "priceSAR": 1500,
+          "unit": "/Paket"
+        },
+        {
+          "name": "Muthawwif Paket 12 Hari",
+          "priceSAR": 2000,
+          "unit": "/Paket"
+        },
+        {
+          "name": "Muthawwif Paket 13 Hari",
+          "priceSAR": 2200,
+          "unit": "/Paket"
+        },
+        {
+          "name": "Muthawwif Pendampingan per Orang",
+          "priceSAR": 2500,
+          "unit": "/Jama'ah",
+          "note": "Khusus Per Orang per Paket"
+        }
+      ]
+    },
+    {
+      "category": "Perlengkapan Umroh",
+      "items": [
+        {
+          "name": "Perlengkapan Umroh Lengkap",
+          "priceIDR": 1500000,
+          "unit": "/Paket",
+          "includes": [
+            "Koper Bagasi",
+            "Koper Kabin",
+            "Tas Sandang",
+            "Tas Sendal",
+            "Syal Umroh",
+            "Buku Panduan Manasik",
+            "Tali ID Card",
+            "Bantal Leher",
+            "Kaik Ihrom",
+            "Mukena Seragam",
+            "Tasbih Digital Tangan"
+          ],
+          "bonus": "Sampul Paspor untuk pemesanan minimal 50 seat"
+        }
+      ]
+    },
+    {
+      "category": "Paket Internet Roaming (Telkomsel)",
+      "items": [
+        {
+          "name": "Internet 4+1 GB",
+          "priceIDR": 285000,
+          "validity": "12 Hari"
+        },
+        {
+          "name": "Internet 8+2 GB",
+          "priceIDR": 385000,
+          "validity": "17 Hari"
+        },
+        {
+          "name": "Internet 9+1 GB",
+          "priceIDR": 310000,
+          "validity": "12 Hari"
+        },
+        {
+          "name": "Paket Favorit 18+2 GB",
+          "priceIDR": 435000,
+          "validity": "17 Hari"
+        },
+        {
+          "name": "Internet 49+1 GB",
+          "priceIDR": 410000,
+          "validity": "12 Hari"
+        },
+        {
+          "name": "Internet 69+1 GB",
+          "priceIDR": 510000,
+          "validity": "17 Hari"
+        },
+        {
+          "name": "Combo 9+1 GB + 30 mnt + 30 SMS",
+          "priceIDR": 385000,
+          "validity": "12 Hari"
+        },
+        {
+          "name": "Combo 8+2 GB + 45 mnt nelpon + 45 SMS",
+          "priceIDR": 560000,
+          "validity": "17 Hari"
+        },
+        {
+          "name": "Combo 18+2 GB + 60 mnt nelpon + 60 SMS",
+          "priceIDR": 585000,
+          "validity": "17 Hari"
+        }
+      ]
+    },
+    {
+      "category": "Other LA Packages",
+      "items": [
+        {
+          "name": "Paket Full LA Umroh",
+          "note": "Hubungi untuk paket lengkap umroh"
+        },
+        {
+          "name": "Paket LA Turki",
+          "note": "Hubungi untuk itinerary Turki"
+        },
+        {
+          "name": "Paket LA Dubai",
+          "note": "Hubungi untuk itinerary Dubai"
+        },
+        {
+          "name": "Paket LA Tour 3 Negara",
+          "note": "Istanbul - Dubai - Madinah (atau setaraknya)"
+        },
+        {
+          "name": "Jasa Perizinan Usaha di Arab Saudi",
+          "note": "Paket hubungan bisnis"
+        },
+        {
+          "name": "Menerima calon Investor Indonesia Untuk Menanam Saham di Bisnis PERHOTELAN MAKKAH MADINAH",
+          "note": "Peluang investasi"
+        },
+        {
+          "name": "Menyediakan Investor Saudi/Dubai",
+          "note": "Untuk dibawa ke Indonesia dalam hal pembangunan proyek Indonesia"
+        },
+        {
+          "name": "Menyediakan Tiket Pesawat Domestik dan Internasional"
+        },
+        {
+          "name": "Menyediakan Visa Malaysia, Dubai, Arab Saudi dan Negara Lainya"
+        },
+        {
+          "name": "Menyediakan Rental Transportasi Indonesia dan Internasional"
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "ceo": {
+      "name": "Mr. Alfi Syahri Rifai Azha",
+      "phone": "+62 851-3521-0328"
+    },
+    "bookingIndonesia": {
+      "name": "Ms. Tiurmadiah (Irma)",
+      "phone": "+62 813-6155-8722"
+    },
+    "salesMarketing": {
+      "name": "Mr. Sa'idurrahman",
+      "phone": "+62 851-8876-5060"
+    },
+    "countryRepYemen": {
+      "name": "Mr. 'Abuud",
+      "phone": "+966 54 129 6949"
+    },
+    "handlingIndonesia": {
+      "name": "Mr. Abdul Hakim Situmorang",
+      "phone": "+62 821-6185-9754"
+    },
+    "teamMakkah": {
+      "name": "Mr. Muslim Abadi",
+      "phone": "+62 822-2878-7957"
+    },
+    "teamMadinah": {
+      "name": "Mr. Agus Miranto",
+      "phone": "+966 57 890 0960"
+    },
+    "office": "Jl. Protokol Pematang Sei Baru Dsn. VI Tanjungbalai Asahan Sumatera Utara (Indonesia)",
+    "email": "alkhaifgrupinternasional@gmail.com",
+    "instagram": "Al Khaif Grup Internasional",
+    "socials": [
+      "Instagram",
+      "YouTube",
+      "TikTok"
+    ]
+  }
+}
