@@ -13,6 +13,11 @@ export type TrustLabel =
   | "customer provided"
   | "verified partner data"
   | "Umroh.com flight service"
+  | "Umroh.com LA service"
+  | "Umroh.com hotel directory"
+  | "Umroh.com visa service"
+  | "Umroh.com package"
+  | "official / Siskopatuh"
   | "Partner reference";
 export type StatusLabel =
   | "indicative"
