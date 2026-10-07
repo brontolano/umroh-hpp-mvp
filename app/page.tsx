@@ -31,14 +31,36 @@ export default function Page() {
   const [tab, setTab] = useState('flights');
   const [simDate, setSimDate] = useState('2027-01-05');
 
-  const base = useMemo(() => Object.values(seed).flat().reduce((a, b) => a + b.price, 0), []);
-  const total = base * pax * (duration / 9) * (occupancy === 'Double' ? 1.25 : occupancy === 'Triple' ? 1.1 : 1);
-  const margin = total * 0.3;
-
   const liveFlights = useMemo(
     () => getLiveFlightsByOrigin(origin.split(' ')[0], simDate),
     [origin, simDate]
   );
+
+  // Live flight price: cheapest available for this origin/date
+  const liveFlightBase = useMemo(() => {
+    if (liveFlights.length === 0) return null;
+    const outbound = liveFlights
+      .filter((f) => f.route.startsWith(origin.split(' ')[0]))
+      .sort((a, b) => a.price - b.price)[0];
+    return outbound?.price ?? null;
+  }, [liveFlights, origin]);
+
+  // Base = non-flight seed items + (live flight OR seed flight price)
+  const base = useMemo(() => {
+    const nonFlightItems = (Object.keys(seed) as Array<keyof typeof seed>)
+      .filter((k) => k !== 'flights')
+      .flatMap((k) => seed[k]);
+    const nonFlightSum = nonFlightItems.reduce((a, b) => a + b.price, 0);
+
+    if (liveFlightBase !== null) {
+      return nonFlightSum + liveFlightBase;
+    }
+    const seedFlightAvg = seed.flights.reduce((a, b) => a + b.price, 0) / seed.flights.length;
+    return nonFlightSum + seedFlightAvg;
+  }, [liveFlightBase]);
+
+  const total = base * pax * (duration / 9) * (occupancy === 'Double' ? 1.25 : occupancy === 'Triple' ? 1.1 : 1);
+  const margin = total * 0.3;
 
   const icons: Record<string, string> = {
     flights: '✈',
@@ -115,7 +137,9 @@ export default function Page() {
           </div>
 
           <p className="fine">
-            ⓘ Seed lokal untuk demo. Harga bukan data live; URL hanya metadata rujukan.
+            ⓘ {liveFlightBase !== null
+              ? 'Harga flights dari data LIVE umroh.com — konfirmasi ke vendor.'
+              : 'Seed lokal untuk demo. Harga bukan data live; URL hanya metadata rujukan.'}
           </p>
         </section>
 
