@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Item } from '../data/contract';
+import type { LiveFlight } from '../data/live';
 
 const rupiah = (n: number) =>
   new Intl.NumberFormat('id-ID', {
@@ -10,17 +11,24 @@ const rupiah = (n: number) =>
 
 interface DailyTableProps {
   flights: Item[];
+  liveFlights?: LiveFlight[];
   simDate: string;
   origin: string;
 }
 
-export default function DailyTable({ flights, simDate, origin }: DailyTableProps) {
+export default function DailyTable({ flights, liveFlights, simDate, origin }: DailyTableProps) {
   const originCode = origin.split(' ')[0];
-  const filtered = flights
-    .filter((f) => f.detail.startsWith(originCode))
-    .sort((a, b) => a.price - b.price);
 
-  if (filtered.length === 0) {
+  const hasLive = liveFlights && liveFlights.length > 0;
+  const rows = hasLive
+    ? liveFlights!
+        .filter((f) => f.route.startsWith(originCode))
+        .sort((a, b) => a.price - b.price)
+    : flights
+        .filter((f) => f.detail.startsWith(originCode))
+        .sort((a, b) => a.price - b.price);
+
+  if (rows.length === 0) {
     return (
       <p className="fine">
         Tidak ada data untuk {simDate} dari asal {originCode}.
@@ -40,18 +48,20 @@ export default function DailyTable({ flights, simDate, origin }: DailyTableProps
         </tr>
       </thead>
       <tbody>
-        {filtered.map((f, i) => {
-          const parts = f.detail.split(' · ');
-          const route = parts[0] || f.detail;
-          const trip = parts[1] || '';
-          const isLive = f.status === 'live';
+        {rows.map((f, i) => {
+          const name = hasLive ? (f as LiveFlight).airline : (f as Item).name;
+          const route = hasLive ? (f as LiveFlight).route : (f as Item).detail;
+          const price = (f as LiveFlight).price ?? (f as Item).price;
+          const isLive = hasLive || (f as Item).status === 'live';
+          const duration = hasLive ? (f as LiveFlight).duration : '';
+
           return (
             <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
-              <td style={{ padding: '0.5rem' }}><b>{f.name}</b></td>
+              <td style={{ padding: '0.5rem' }}><b>{name}</b></td>
               <td style={{ padding: '0.5rem', color: 'var(--muted-foreground)' }}>{route}</td>
-              <td style={{ padding: '0.5rem', color: 'var(--muted-foreground)' }}>{trip}</td>
+              <td style={{ padding: '0.5rem', color: 'var(--muted-foreground)' }}>{duration}</td>
               <td style={{ padding: '0.5rem', textAlign: 'right', fontWeight: 600 }}>
-                {rupiah(f.price)}
+                {rupiah(price)}
               </td>
               <td style={{ padding: '0.5rem', textAlign: 'center' }}>
                 <span
@@ -63,7 +73,7 @@ export default function DailyTable({ flights, simDate, origin }: DailyTableProps
                     color: isLive ? '#065f46' : '#92400e',
                   }}
                 >
-                  {isLive ? 'Live' : 'Indikatif'}
+                  {isLive ? 'LIVE' : 'Indikatif'}
                 </span>
               </td>
             </tr>

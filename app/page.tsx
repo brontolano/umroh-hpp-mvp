@@ -10,6 +10,7 @@ import DailyTable from '../components/DailyTable';
 import SummaryCard from '../components/SummaryCard';
 
 import { seed, partnerReferences } from '../data/seed';
+import { getLiveFlightsByOrigin } from '../data/live';
 
 const labels: Record<string, string> = {
   flights: 'Flights',
@@ -33,6 +34,11 @@ export default function Page() {
   const base = useMemo(() => Object.values(seed).flat().reduce((a, b) => a + b.price, 0), []);
   const total = base * pax * (duration / 9) * (occupancy === 'Double' ? 1.25 : occupancy === 'Triple' ? 1.1 : 1);
   const margin = total * 0.3;
+
+  const liveFlights = useMemo(
+    () => getLiveFlightsByOrigin(origin.split(' ')[0], simDate),
+    [origin, simDate]
+  );
 
   const icons: Record<string, string> = {
     flights: '✈',
@@ -97,6 +103,7 @@ export default function Page() {
             ) : tab === 'tabel' ? (
               <DailyTable
                 flights={seed.flights}
+                liveFlights={liveFlights}
                 simDate={simDate}
                 origin={origin}
               />
