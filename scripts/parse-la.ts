@@ -11,18 +11,43 @@ const __dirname = path.dirname(__filename);
 
 const OUT = path.join(__dirname, '../data/live/la.json');
 
-function parseRp(s: string): number {
-  const m = s.match(/Rp[\s\xa0]*([\d,. ]+)\s*(jt|juta)?/);
-  if (!m) return 0;
-  let numStr = m[1].trim();
-  const hasComma = numStr.includes(',');
-  const dotCount = (numStr.match(/\./g) || []).length;
-  if (hasComma && dotCount === 0) numStr = numStr.replace(',', '.');
-  else numStr = numStr.replace(/\./g, '').replace(',', '.');
+function parseNumber(s: string): number {
+  let numStr = s.trim().replace(/\s/g, '');
+  if (numStr.includes(',') && numStr.includes('.')) {
+    numStr = numStr.replace(/,/g, '');
+  } else if (numStr.includes(',')) {
+    numStr = numStr.replace(/,/g, '');
+  }
+  numStr = numStr.replace(/\./g, '').replace(/\s/g, '');
   const num = parseFloat(numStr);
-  if (isNaN(num)) return 0;
-  if (m[2] === 'jt' || m[2] === 'juta') return Math.round(num * 1_000_000);
-  return Math.round(num);
+  return isNaN(num) ? 0 : num;
+}
+
+function parseRp(s: string): { price: number; priceMax: number | undefined } {
+  // Handle range: Rp 11,5–13,7 jt -> price: 11500000, priceMax: 13700000
+  const rangeMatch = s.match(/Rp[\s\xA0]*([\d,.]+)\s*(?:–|-|—)\s*([\d,.]+)\s*jt/);
+  if (rangeMatch) {
+    return {
+      price: parseNumber(rangeMatch[1].trim()) * 1000000,
+      priceMax: parseNumber(rangeMatch[2].trim()) * 1000000
+    };
+  }
+  // Handle single jt: Rp 7,5 jt
+  const jtMatch = s.match(/Rp[\s\xA0]*([\d,.]+)\s*jt/);
+  if (jtMatch) {
+    return { price: parseNumber(jtMatch[1].trim()) * 1000000, priceMax: undefined };
+  }
+  // Handle juta: Rp 7,5 juta
+  const jt2Match = s.match(/Rp[\s\xA0]*([\d,.]+)\s*juta/);
+  if (jt2Match) {
+    return { price: parseNumber(jt2Match[1].trim()) * 1000000, priceMax: undefined };
+  }
+  // Handle plain numbers: Rp 115000000
+  const fullMatch = s.match(/Rp[\s\xA0]*([\d,. ]+)/);
+  if (fullMatch) {
+    return { price: parseNumber(fullMatch[1].trim()), priceMax: undefined };
+  }
+  return { price: 0, priceMax: undefined };
 }
 
 interface LAEntry {
@@ -73,25 +98,14 @@ function parseLa(fp: string): LAEntry[] {
     const travelAgent = pathPart.replace(/-/g, ' ').replace(/la$/i, '').trim() || 'umroh.com';
 
     // Price line: "[Rp 7,5–13,7 jt](/path)"
-    let price = 0, priceMax = 0;
+    let price = 0;
+    let priceMax: number | undefined;
     for (let j = i + 2; j < Math.min(i + 8, lines.length); j++) {
       const pl = lines[j] ?? '';
-      if (pl.match(/Rp[\s\xa0]/)) {
-        const nums = pl.match(/Rp[\s\xa0]*([\d,. ]+)/g) || [];
-        if (nums.length >= 1) {
-          const p1 = parseRp(nums[0] as string);
-          if (p1 > 0) { price = p1; }
-        }
-        if (nums.length >= 2) {
-          const p2 = parseRp(nums[1] as string);
-          if (p2 > 0) { priceMax = p2; }
-        }
-        // Handle "X–Y jt" pattern in one string
-        const rangeMatch = pl.match(/Rp[\s\xa0]*([\d,]+)–([\d,]+)\s*jt/);
-        if (rangeMatch) {
-          price = parseRp('Rp ' + rangeMatch[1].replace(',','.') + ' jt');
-          priceMax = parseRp('Rp ' + rangeMatch[2].replace(',','.') + ' jt');
-        }
+      if (pl.match(/Rp[\s\xA0]/)) {
+        const rp = parseRp(pl);
+        price = rp.price;
+        priceMax = rp.priceMax;
         break;
       }
     }
@@ -100,7 +114,7 @@ function parseLa(fp: string): LAEntry[] {
       const key = `${name}|${price}|${destination}`;
       if (!seen.has(key)) {
         seen.add(key);
-        entries.push({ name, detail, price, priceMax: priceMax || undefined, stars, duration, destination, travelAgent, sourceUrl: url, source: 'umroh.com', status: 'live' });
+        entries.push({ name, detail, price, priceMax, stars, duration, destination, travelAgent, sourceUrl: url, source: 'umroh.com', status: 'live' });
       }
     }
   }

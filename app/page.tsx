@@ -16,16 +16,21 @@ import { getLiveFlightsByOrigin } from '../data/live';
 import {
   liveHotels, liveTransport, liveVisa, liveServices, livePartnerContacts,
 } from '../data/liveHotels';
+import {
+  hotelsGrouped, transportGrouped, servicesGrouped, visaGrouped,
+  catalogStats, CATALOG_SOURCE, CATALOG_UPDATE, SAR_TO_IDR,
+} from '../data/catalog';
 
 const labels: Record<string, string> = {
   flights: 'Flights',
   tabel: 'Tabel Harian',
-  hotels: 'Hotels (Live)',
-  transport: 'Transport (Live)',
-  visa: 'Visa (Live)',
   la: 'LA',
+  hotels: 'Hotels',
+  transport: 'Transport',
+  visa: 'Visa',
   program: 'Program',
-  partner: 'Partner (Live)',
+  partner: 'Partner',
+  katalog: 'Katalog Mitra',
 };
 
 export default function Page() {
@@ -135,11 +140,14 @@ export default function Page() {
             {tab === 'partner' ? (
               <>
                 <LivePartnerView
-                  transport={liveTransport}
-                  visa={liveVisa}
-                  services={liveServices}
+                  transport={transportGrouped as any}
+                  visa={visaGrouped as any}
+                  services={servicesGrouped as any}
                   contacts={livePartnerContacts}
                 />
+                <p className="fine">
+                  ⓘ Sumber: <code>{CATALOG_SOURCE}</code> — Update {CATALOG_UPDATE} — Kurs 1 SAR = {SAR_TO_IDR.toLocaleString('id-ID')} IDR. Total {catalogStats().hotels} baris hotel, {catalogStats().transport} transport, {catalogStats().visa} visa, {catalogStats().services} layanan. Trust: partner reference · Status: indicative.
+                </p>
                 <hr />
                 {partnerReferences.map((p) => <PartnerCard key={p.id} p={p} />)}
               </>
@@ -152,24 +160,42 @@ export default function Page() {
               />
             ) : tab === 'hotels' ? (
               <HotelCatalog
-                hotels={liveHotels}
+                hotels={hotelsGrouped as any}
                 simDate={simDate}
                 occupancy={occ}
               />
             ) : tab === 'transport' ? (
               <LivePartnerView
-                transport={liveTransport}
-                visa={liveVisa}
-                services={liveServices}
+                transport={transportGrouped as any}
+                visa={visaGrouped as any}
+                services={servicesGrouped as any}
                 contacts={livePartnerContacts}
               />
             ) : tab === 'visa' ? (
               <LivePartnerView
-                transport={liveTransport}
-                visa={liveVisa}
-                services={liveServices}
+                transport={transportGrouped as any}
+                visa={visaGrouped as any}
+                services={servicesGrouped as any}
                 contacts={livePartnerContacts}
               />
+            ) : tab === 'katalog' ? (
+              <>
+                <p className="fine">
+                  ⓘ <b>Katalog Mitra Al Khaif Group</b> — PDF 23 halaman, OCR via vision API, Update {CATALOG_UPDATE}. Tersedia {catalogStats().uniqueHotels} hotel unik ({catalogStats().hotels} baris hotel) di {catalogStats().cities.join(', ')}. Kurs 1 SAR = {SAR_TO_IDR.toLocaleString('id-ID')} IDR. Trust: partner reference · Status: indicative.
+                </p>
+                <HotelCatalog
+                  hotels={hotelsGrouped as any}
+                  simDate={simDate}
+                  occupancy={occ}
+                />
+                <hr />
+                <LivePartnerView
+                  transport={transportGrouped as any}
+                  visa={visaGrouped as any}
+                  services={servicesGrouped as any}
+                  contacts={livePartnerContacts}
+                />
+              </>
             ) : (
               seed[tab].map((item, i) => (
                 <ItemCard key={i} item={item} icon={icons[tab] ?? '✦'} />
