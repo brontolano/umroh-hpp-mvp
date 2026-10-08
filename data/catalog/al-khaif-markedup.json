@@ -5942,7 +5942,7 @@
   ],
   "services": [
     {
-      "category": "Handling",
+      "category": "Handling Kepulangan Saja",
       "name": "Handling KNO - PP (Chek In Keberangkatan & Kepulangan) min 11 pax",
       "price": 70000,
       "currency": "IDR",
@@ -6082,7 +6082,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Other LA Packages",
       "name": "Waqof Qur'an Madinah Asli (Min. 40 Eksemplar)",
       "price": 28,
       "currency": "SAR",
@@ -6092,7 +6092,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Other LA Packages",
       "name": "Waqof Qur'an Madinah Asli (Min. 20 Eksemplar)",
       "price": 30,
       "currency": "SAR",
@@ -6102,7 +6102,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Other LA Packages",
       "name": "Waqof Qur'an Madinah Asli (di bawah 20 Eksemplar)",
       "price": 35,
       "currency": "SAR",
@@ -6112,7 +6112,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Other LA Packages",
       "name": "Waqof Qur'an + Pengantaran Masjid + Video",
       "price": 100,
       "currency": "SAR",
@@ -6132,7 +6132,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Badal Umroh",
       "name": "Jasa Badal Umroh",
       "price": 1000000,
       "currency": "IDR",
@@ -6142,7 +6142,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Dorongan Umroh",
       "name": "Jasa Dorongan Umroh",
       "price": 1200000,
       "currency": "IDR",
@@ -6152,7 +6152,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Dorongan Thowaf Wada'",
       "name": "Jasa Dorong Thowaf Wada'",
       "price": 900000,
       "currency": "IDR",
@@ -6162,7 +6162,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Muthawwif/ah",
       "name": "Jasa Muthawwif/ah - Harian",
       "price": 300,
       "currency": "SAR",
@@ -6172,7 +6172,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Muthawwif/ah",
       "name": "Jasa Muthawwif/ah - Paket 9 Hari",
       "price": 1500,
       "currency": "SAR",
@@ -6182,7 +6182,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Muthawwif/ah",
       "name": "Jasa Muthawwif/ah - Paket 12 Hari",
       "price": 2000,
       "currency": "SAR",
@@ -6192,7 +6192,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Muthawwif/ah",
       "name": "Jasa Muthawwif/ah - Paket 13 Hari",
       "price": 2200,
       "currency": "SAR",
@@ -6202,7 +6202,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Muthawwif/ah",
       "name": "Jasa Muthawwif/ah - Pendampingan Khusus Per Orang",
       "price": 2500,
       "currency": "SAR",
@@ -6212,7 +6212,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Catering & Buffet",
       "name": "Buffett Catering",
       "price": 45,
       "currency": "SAR",
@@ -6222,7 +6222,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Catering & Buffet",
       "name": "Nasi Box Catering",
       "price": 17,
       "currency": "SAR",
@@ -6232,7 +6232,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Jasa Laundry",
       "name": "Jasa Laundry",
       "price": 15,
       "currency": "SAR",
@@ -6242,7 +6242,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Handling Kepulangan Saja",
       "name": "Handling Kepulangan Saja (Min 35 Pax)",
       "price": 70,
       "currency": "SAR",
@@ -6252,7 +6252,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Other LA Packages",
       "name": "Money Changer Paket 6.000 SAR ke atas",
       "price": 6000,
       "currency": "SAR",
@@ -6262,7 +6262,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Other LA Packages",
       "name": "Money Changer Paket 5.000 SAR ke bawah",
       "price": 5000,
       "currency": "SAR",
@@ -6272,7 +6272,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Other LA Packages",
       "name": "Infaq Nasi Sabil",
       "price": 15,
       "currency": "SAR",
@@ -6282,7 +6282,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Perlengkapan Umroh",
       "name": "Perlengkapan Umroh Paket",
       "price": 1500000,
       "currency": "IDR",
@@ -6292,7 +6292,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Snack & Mineral untuk City Tour",
       "name": "Snack & Mineral Pemesanan 21 Pax ke atas",
       "price": 6,
       "currency": "SAR",
@@ -6302,7 +6302,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Snack & Mineral untuk City Tour",
       "name": "Snack & Mineral Pemesanan 11-20 Paket",
       "price": 8,
       "currency": "SAR",
@@ -6312,7 +6312,7 @@
       "fx": 4750
     },
     {
-      "category": "Handling",
+      "category": "Snack & Mineral untuk City Tour",
       "name": "Snack & Mineral Pemesanan 10 Pax kebawah",
       "price": 10,
       "currency": "SAR",
