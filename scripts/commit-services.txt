@@ -1,9 +1,0 @@
-feat(services): categorize PDF services into 11 categories (post-process)
-
-Split the single 'Handling' category into 11 service categories
-(Catering & Buffet, Jasa Laundry, Handling Kepulangan Saja, Snack & Mineral
-untuk City Tour, Jasa Badal Umroh, Jasa Dorongan Umroh, Jasa Dorongan
-Thowaf Wada', Jasa Muthawwif/ah, Perlengkapan Umroh, Other LA Packages,
-Handling) by keyword on service name.
-
-Co-Authored-By: Hermes Agent <noreply@nousresearch.com>
