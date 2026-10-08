@@ -9,7 +9,7 @@
 // for flights, and live.ts would do for LA. Currency: SAR (default), USD/IDR
 // where noted. Convert to IDR by multiplying SAR by 4300.
 
-import rawHotels from './live/hotels.json';
+import rawHotels from './live/hotels.json' with { type: 'json' };
 
 export interface HotelRate {
   period: string;
