@@ -1,0 +1,13 @@
+# Python dependencies for the Al Khaif PDF OCR pipeline.
+
+# Install with uv (recommended):
+#   uv venv
+#   source .venv/bin/activate
+#   uv pip install -r scripts/requirements-pdf.txt
+#
+# Or (the earlier /tmp/pdf_venv approach mentioned in project notes):
+#   /tmp/pdf_venv/bin/python -m pip install -r scripts/requirements-pdf.txt
+
+pymupdf>=1.24.0
+requests>=2.31.0
+python-dotenv>=1.0.0

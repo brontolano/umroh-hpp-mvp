@@ -1,0 +1,10 @@
+docs + pipeline: OCR render script, requirements, ocr-pdf.sh wrapper
+
+- scripts/render_pdf.py : render PDF pages to PNG (pymupdf, DPI configurable).
+- scripts/ocr-pdf.sh    : <pdf> [out-dir] -> render -> vision OCR batch -> JSONL.
+- scripts/requirements-pdf.txt : pymupdf/requests/python-dotenv (+uv setup).
+- scripts/scheduler.cjs cron mode already node-cron */15 * * * * (valid).
+- Obsidian/Proyek/Tools Internal HPP Umroh.md : OCR pipeline + cron note.
+- scripts/test-getRateForDate.ts : unit test (node:test, 7 pass).
+
+Co-Authored-By: Hermes <hermes@nousresearch.com>
