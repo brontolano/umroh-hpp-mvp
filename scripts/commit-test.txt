@@ -1,9 +1,0 @@
-tests: add getRateForDate date-logic unit verification
-
-Add scripts/test-getRateForDate.ts (Node's built-in runner) covering
-parseDate/parsePeriod behaviour through getRateForDate: format-1 & format-2
-windows, COMING SOON skip, out-of-range -> nearest prior block, season & month
-boundaries. Requires Node 26's type stripping + JSON modules; date/liveHotels.ts
-now carries 'with { type: "json" }' so the JSON module loads in Node ESM.
-
-Co-Authored-By: Hermes <hermes@nousresearch.com>
