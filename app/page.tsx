@@ -38,6 +38,7 @@ export default function Page() {
   const [duration, setDuration] = useState(9);
   const [pax, setPax] = useState(2);
   const [occupancy, setOccupancy] = useState('Quad');
+  const [currency, setCurrency] = useState<'sar' | 'idr'>('idr');
   const [tab, setTab] = useState('flights');
   const [simDate, setSimDate] = useState('2027-01-05');
 
@@ -98,6 +99,10 @@ export default function Page() {
           </div>
         </div>
         <div className="status"><i /> Data lokal + Live PDF · Al Khaif</div>
+        <div className="currency-toggle">
+          <button className={currency === 'sar' ? 'active' : ''} onClick={() => setCurrency('sar')}>SAR</button>
+          <button className={currency === 'idr' ? 'active' : ''} onClick={() => setCurrency('idr')}>IDR</button>
+        </div>
       </header>
 
       <section className="hero">
@@ -140,6 +145,7 @@ export default function Page() {
             {tab === 'partner' ? (
               <>
                 <LivePartnerView
+  currency={currency}
                   transport={transportGrouped as any}
                   visa={visaGrouped as any}
                   services={servicesGrouped as any}
@@ -160,12 +166,14 @@ export default function Page() {
               />
             ) : tab === 'hotels' ? (
               <HotelCatalog
+  currency={currency}
                 hotels={hotelsGrouped as any}
                 simDate={simDate}
                 occupancy={occ}
               />
             ) : tab === 'transport' ? (
               <LivePartnerView
+  currency={currency}
                 transport={transportGrouped as any}
                 visa={visaGrouped as any}
                 services={servicesGrouped as any}
@@ -173,6 +181,7 @@ export default function Page() {
               />
             ) : tab === 'visa' ? (
               <LivePartnerView
+  currency={currency}
                 transport={transportGrouped as any}
                 visa={visaGrouped as any}
                 services={servicesGrouped as any}
@@ -184,12 +193,14 @@ export default function Page() {
                   ⓘ <b>Katalog Mitra Al Khaif Group</b> — PDF 23 halaman, OCR via vision API, Update {CATALOG_UPDATE}. Tersedia {catalogStats().uniqueHotels} hotel unik ({catalogStats().hotels} baris hotel) di {catalogStats().cities.join(', ')}. Kurs 1 SAR = {SAR_TO_IDR.toLocaleString('id-ID')} IDR. Trust: partner reference · Status: indicative.
                 </p>
                 <HotelCatalog
+  currency={currency}
                   hotels={hotelsGrouped as any}
                   simDate={simDate}
                   occupancy={occ}
                 />
                 <hr />
                 <LivePartnerView
+  currency={currency}
                   transport={transportGrouped as any}
                   visa={visaGrouped as any}
                   services={servicesGrouped as any}

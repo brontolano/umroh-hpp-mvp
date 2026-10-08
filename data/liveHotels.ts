@@ -129,7 +129,7 @@ export const liveVisa: VisaEntry[] = data.visa;
 export const liveServices: ServiceCategory[] = data.services;
 export const livePartnerContacts: Contacts = data.contacts;
 
-export const SAR_TO_IDR = data.ratePerSAR; // 4300
+export const SAR_TO_IDR = 4750; // 1 SAR = Rp 4.750 (ubah sesuai kurs)
 
 export function findHotelByName(name: string): HotelEntry | undefined {
   return data.hotels.find((h) => h.name === name);

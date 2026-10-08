@@ -23,14 +23,14 @@ export interface HotelEntry {
   period: string;
   occupancy: string;
   priceSAR: number;
-  priceIDR: number;
+  markedUpPriceSAR: number;
   notes?: string;
 }
 export interface TransportEntry {
   vehicle: string;
   route: string;
   priceSAR: number;
-  priceIDR: number;
+  markedUpPriceSAR: number;
   note?: string;
 }
 export interface ServiceEntry {
@@ -38,7 +38,7 @@ export interface ServiceEntry {
   name: string;
   price: number;
   currency: 'SAR' | 'USD' | 'IDR';
-  priceIDR: number;
+  markedUpPriceSAR?: number;
   paxMin?: number;
   note?: string;
 }
@@ -146,7 +146,7 @@ export const hotelsGrouped: HotelEntryShim[] = (() => {
       block = { period: r.period };
       entry.rates.push(block);
     }
-    (block as any)[field] = r.priceSAR;
+    (block as any)[field] = r.markedUpPriceSAR ?? r.priceSAR;
   }
   return Array.from(map.values()).sort((a, b) => {
     if (a.city !== b.city) return a.city < b.city ? -1 : 1;
@@ -168,7 +168,7 @@ export const transportGrouped: TransportEntryShim[] = (() => {
       entry = { vehicle: r.vehicle, rates: [] };
       map.set(r.vehicle, entry);
     }
-    entry.rates.push({ route: r.route, price: r.priceSAR });
+    entry.rates.push({ route: r.route, price: r.markedUpPriceSAR ?? r.priceSAR });
   }
   return Array.from(map.values()).sort((a, b) => a.vehicle.localeCompare(b.vehicle));
 })();
@@ -190,10 +190,10 @@ export interface ServiceCategoryShim {
 
 function rowToItem(r: ServiceEntry): ServiceItemShim {
   if (r.currency === 'SAR') {
-    return { name: r.name, priceSAR: r.price, priceIDR: r.priceIDR, note: r.note };
+    return { name: r.name, priceSAR: r.markedUpPriceSAR ?? r.price, priceIDR: undefined, note: r.note };
   }
   if (r.currency === 'USD') {
-    return { name: r.name, priceUSD: r.price, priceIDR: r.priceIDR, note: r.note };
+    return { name: r.name, priceUSD: r.price, priceIDR: undefined, note: r.note };
   }
   return { name: r.name, priceIDR: r.price, note: r.note, unit: 'IDR' };
 }
@@ -224,7 +224,7 @@ export interface VisaEntryShim {
 export const visaGrouped: VisaEntryShim[] = visa.map((v) => ({
   name: v.name,
   priceUSD: v.currency === 'USD' ? v.price : undefined,
-  priceSAR: v.currency === 'SAR' ? v.price : undefined,
+  priceSAR: v.currency === 'SAR' ? v.markedUpPriceSAR ?? v.price : undefined,
   note: v.paxMin !== undefined ? `min ${v.paxMin} pax` : v.note,
 }));
 

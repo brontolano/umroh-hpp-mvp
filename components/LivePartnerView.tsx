@@ -5,6 +5,7 @@ import type {
   ServiceCategory,
   Contacts,
 } from '../data/liveHotels';
+import { SAR_TO_IDR } from '../data/liveHotels';
 
 const rupiah = (n: number) =>
   new Intl.NumberFormat('id-ID', {
@@ -20,10 +21,11 @@ interface LivePartnerViewProps {
   visa: VisaEntry[];
   services: ServiceCategory[];
   contacts: Contacts;
+  currency: 'sar' | 'idr';
 }
 
 export default function LivePartnerView({
-  transport, visa, services, contacts,
+  transport, visa, services, contacts, currency,
 }: LivePartnerViewProps) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -33,7 +35,7 @@ export default function LivePartnerView({
           <details key={tv.vehicle} style={{ marginBottom: '0.5rem' }}>
             <summary style={{ cursor: 'pointer', padding: '0.4rem 0', fontWeight: 600 }}>
               {tv.vehicle}
-              {tv.fullTripJeddahJED ? ` — Full Trip Jed-Jed: ${sar(tv.fullTripJeddahJED)}` : ''}
+              {tv.fullTripJeddahJED ? ` — Full Trip Jed-Jed: ${currency === 'idr' ? rupiah(tv.fullTripJeddahJED * SAR_TO_IDR) : sar(tv.fullTripJeddahJED)}` : ''}
             </summary>
             <table style={{ width: '100%', fontSize: '0.85rem', borderCollapse: 'collapse' }}>
               <thead>
@@ -46,13 +48,13 @@ export default function LivePartnerView({
                 {tv.rates.map((r, i) => (
                   <tr key={i} style={{ borderBottom: '1px dashed var(--border)' }}>
                     <td style={{ padding: '0.25rem' }}>{r.route}</td>
-                    <td style={{ textAlign: 'right', padding: '0.25rem' }}>{sar(r.price)}</td>
+                    <td style={{ textAlign: 'right', padding: '0.25rem' }}>{currency === 'idr' ? rupiah(r.price * SAR_TO_IDR) : sar(r.price)}</td>
                   </tr>
                 ))}
                 {tv.madinahRoutes?.map((r, i) => (
                   <tr key={'m' + i} style={{ borderBottom: '1px dashed var(--border)' }}>
                     <td style={{ padding: '0.25rem', color: 'var(--muted-foreground)' }}>{r.route} (Madinah)</td>
-                    <td style={{ textAlign: 'right', padding: '0.25rem' }}>{sar(r.price)}</td>
+                    <td style={{ textAlign: 'right', padding: '0.25rem' }}>{currency === 'idr' ? rupiah(r.price * SAR_TO_IDR) : sar(r.price)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -75,21 +77,19 @@ export default function LivePartnerView({
                       {rule.minPax !== undefined && `≥${rule.minPax} pax: `}
                       {rule.maxPax !== undefined && `≤${rule.maxPax} pax: `}
                       {rule.priceUSD && `${rule.priceUSD} USD/pax`}
-                      {rule.priceSAR && `${rule.priceSAR} SAR/pax`}
+                      {rule.priceSAR && (currency === 'idr' ? rupiah(rule.priceSAR * SAR_TO_IDR) : sar(rule.priceSAR))}
                       {rule.note && ` (${rule.note})`}
                     </li>
                   ))}
                 </ul>
               )}
-              {v.priceSAR && <small>{sar(v.priceSAR)}</small>}
-              {v.includes && (
-                <small>Include: {v.includes.join(', ')}</small>
-              )}
+              {v.priceSAR && (currency === 'idr' ? rupiah(v.priceSAR * SAR_TO_IDR) : sar(v.priceSAR))}
+              {v.includes && <small>Include: {v.includes.join(', ')}</small>}
               {v.items && (
                 <ul style={{ margin: 0, paddingLeft: '1.2rem', fontSize: '0.85rem' }}>
                   {v.items.map((it, k) => (
                     <li key={k}>
-                      {it.variant}: {sar(it.priceSAR)}
+                      {it.variant}: {currency === 'idr' ? rupiah(it.priceSAR * SAR_TO_IDR) : sar(it.priceSAR)}
                       {it.minPax && ` (min ${it.minPax} box)`}
                     </li>
                   ))}
@@ -99,7 +99,7 @@ export default function LivePartnerView({
               {v.leadTime && <small>Lead time: {v.leadTime}</small>}
             </div>
             <div className="item-price">
-              <b>{v.priceUSD ? `${v.priceUSD} USD` : v.priceSAR ? sar(v.priceSAR) : 'Lihat'}</b>
+              <b>{v.priceUSD ? `${v.priceUSD} USD` : v.priceSAR !== undefined ? (currency === 'idr' ? rupiah(v.priceSAR * SAR_TO_IDR) : sar(v.priceSAR)) : 'Lihat'}</b>
               <small>LIVE</small>
             </div>
           </article>
@@ -117,8 +117,7 @@ export default function LivePartnerView({
               {cat.items.map((it, i) => (
                 <li key={i} style={{ marginBottom: '0.25rem' }}>
                   <b>{it.name}</b>
-                  {it.priceSAR !== undefined && ` — ${sar(it.priceSAR)}`}
-                  {it.priceIDR !== undefined && ` — ${rupiah(it.priceIDR)}`}
+                  {it.priceSAR !== undefined && (currency === 'idr' ? rupiah(it.priceSAR * SAR_TO_IDR) : sar(it.priceSAR))}
                   {it.unit && ` ${it.unit}`}
                   {it.minPax !== undefined && ` (min ${it.minPax}${it.unit?.includes('Kg') ? ' Kg' : ' pax'})`}
                   {it.validity && ` (${it.validity})`}

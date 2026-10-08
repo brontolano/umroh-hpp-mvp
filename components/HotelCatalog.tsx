@@ -15,9 +15,10 @@ interface HotelCatalogProps {
   hotels: HotelEntry[];
   simDate: string;
   occupancy: 'Double' | 'Triple' | 'Quad' | 'Quint' | string;
+  currency: 'sar' | 'idr';
 }
 
-export default function HotelCatalog({ hotels, simDate, occupancy }: HotelCatalogProps) {
+export default function HotelCatalog({ hotels, simDate, occupancy, currency }: HotelCatalogProps) {
   const occ = (['Double', 'Triple', 'Quad', 'Quint'].includes(occupancy)
     ? occupancy
     : 'Quad') as 'Double' | 'Triple' | 'Quad' | 'Quint';
@@ -52,13 +53,15 @@ export default function HotelCatalog({ hotels, simDate, occupancy }: HotelCatalo
               {hotel.city} · {hotel.stars}★ · {hotel.category}
             </small>
             <small>
-              Untuk {simDate} ({occ}): {sar(hotelRateToIdr(hotel, occ, simDate) ? Math.round((rateIdr as number) / SAR_TO_IDR) : 0)} SAR ·{' '}
-              {rupiah(rateIdr as number)} IDR
+              Untuk {simDate} ({occ}):{' '}
+              {currency === 'idr'
+                ? rupiah(rateIdr as number)
+                : sar(hotelRateToIdr(hotel, occ, simDate) ? Math.round((rateIdr as number) / SAR_TO_IDR) : 0)}
             </small>
           </div>
           <div className="item-price">
-            <b>{rupiah(rateIdr as number)}</b>
-            <small>LIVE</small>
+            <b>{currency === 'idr' ? rupiah(rateIdr as number) : sar(hotelRateToIdr(hotel, occ, simDate) ? Math.round((rateIdr as number) / SAR_TO_IDR) : 0)}</b>
+            <small>{currency === 'idr' ? 'LIVE (IDR)' : 'LIVE (SAR)'}</small>
           </div>
         </article>
       ))}
